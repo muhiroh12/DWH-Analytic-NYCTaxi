@@ -1,0 +1,54 @@
+[2024-11-12T19:53:10.272+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-11-12T19:53:10.290+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nyc_green_taxi.load_transform_data_to_bq manual__2024-11-12T19:47:45.040719+00:00 [queued]>
+[2024-11-12T19:53:10.298+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nyc_green_taxi.load_transform_data_to_bq manual__2024-11-12T19:47:45.040719+00:00 [queued]>
+[2024-11-12T19:53:10.299+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2024-11-12T19:53:10.310+0000] {taskinstance.py:2330} INFO - Executing <Task(GCSToBigQueryOperator): load_transform_data_to_bq> on 2024-11-12 19:47:45.040719+00:00
+[2024-11-12T19:53:10.316+0000] {standard_task_runner.py:64} INFO - Started process 246 to run task
+[2024-11-12T19:53:10.319+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'nyc_green_taxi', 'load_transform_data_to_bq', 'manual__2024-11-12T19:47:45.040719+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion.py', '--cfg-path', '/tmp/tmp3ii4a046']
+[2024-11-12T19:53:10.321+0000] {standard_task_runner.py:91} INFO - Job 30: Subtask load_transform_data_to_bq
+[2024-11-12T19:53:10.363+0000] {task_command.py:426} INFO - Running <TaskInstance: nyc_green_taxi.load_transform_data_to_bq manual__2024-11-12T19:47:45.040719+00:00 [running]> on host 7a2cfb7b2df5
+[2024-11-12T19:53:10.436+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='nyc_green_taxi' AIRFLOW_CTX_TASK_ID='load_transform_data_to_bq' AIRFLOW_CTX_EXECUTION_DATE='2024-11-12T19:47:45.040719+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-12T19:47:45.040719+00:00'
+[2024-11-12T19:53:10.437+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-11-12T19:53:10.450+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2024-11-12T19:53:10.451+0000] {connection.py:274} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2024-11-12T19:53:10.452+0000] {base.py:84} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2024-11-12T19:53:10.452+0000] {gcs_to_bigquery.py:381} INFO - Using existing BigQuery table for storing data...
+[2024-11-12T19:53:10.498+0000] {gcs_to_bigquery.py:385} INFO - Executing: {'load': {'autodetect': True, 'createDisposition': 'CREATE_IF_NEEDED', 'destinationTable': {'projectId': 'northern-shield-437204-m0', 'datasetId': 'nyc_taxi', 'tableId': 'green_tripdata'}, 'sourceFormat': 'PARQUET', 'sourceUris': ['gs://green_taxi_bucket/transform/tf_green_tripdata_2023-01.parquet'], 'writeDisposition': 'WRITE_EMPTY', 'ignoreUnknownValues': False}}
+[2024-11-12T19:53:10.499+0000] {bigquery.py:1702} INFO - Inserting job ***_nyc_green_taxi_load_transform_data_to_bq_2024_11_12T19_47_45_040719_00_00_405cea2919e59fd8b98cf500bf50e14c
+[2024-11-12T19:53:11.851+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-11-12T19:53:11.852+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/google/cloud/transfers/gcs_to_bigquery.py", line 386, in execute
+    job: BigQueryJob | UnknownJob = self._submit_job(self.hook, job_id)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/google/cloud/transfers/gcs_to_bigquery.py", line 308, in _submit_job
+    return hook.insert_job(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/google/common/hooks/base_google.py", line 558, in inner_wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/google/cloud/hooks/bigquery.py", line 1705, in insert_job
+    job_api_repr._begin()
+  File "/home/airflow/.local/lib/python3.9/site-packages/google/cloud/bigquery/job/base.py", line 740, in _begin
+    api_response = client._call_api(
+  File "/home/airflow/.local/lib/python3.9/site-packages/google/cloud/bigquery/client.py", line 831, in _call_api
+    return call()
+  File "/home/airflow/.local/lib/python3.9/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+    return retry_target(
+  File "/home/airflow/.local/lib/python3.9/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+    _retry_error_helper(
+  File "/home/airflow/.local/lib/python3.9/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/home/airflow/.local/lib/python3.9/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+    result = target()
+  File "/home/airflow/.local/lib/python3.9/site-packages/google/cloud/_http/__init__.py", line 494, in api_request
+    raise exceptions.from_http_response(response)
+google.api_core.exceptions.NotFound: 404 POST https://bigquery.googleapis.com/bigquery/v2/projects/northern-shield-437204-m0/jobs?prettyPrint=false: Not found: Dataset northern-shield-437204-m0:nyc_taxi
+[2024-11-12T19:53:11.861+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=nyc_green_taxi, task_id=load_transform_data_to_bq, run_id=manual__2024-11-12T19:47:45.040719+00:00, execution_date=20241112T194745, start_date=20241112T195310, end_date=20241112T195311
+[2024-11-12T19:53:11.878+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 30 for task load_transform_data_to_bq (404 POST https://bigquery.googleapis.com/bigquery/v2/projects/northern-shield-437204-m0/jobs?prettyPrint=false: Not found: Dataset northern-shield-437204-m0:nyc_taxi; 246)
+[2024-11-12T19:53:11.908+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2024-11-12T19:53:11.922+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-12T19:53:11.924+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

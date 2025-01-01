@@ -1,0 +1,9 @@
+pyarrow
+tqdm
+skimpy
+astronomer-cosmos[dbt-bigquery]
+soda-core-bigquery
+apache-airflow-providers-google
+google-cloud-bigquery-storage
+protobuf
+pylance

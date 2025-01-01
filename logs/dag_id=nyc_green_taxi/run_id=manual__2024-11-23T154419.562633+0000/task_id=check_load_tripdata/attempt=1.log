@@ -1,0 +1,47 @@
+[2024-11-23T15:45:01.777+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-11-23T15:45:01.815+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nyc_green_taxi.check_load_tripdata manual__2024-11-23T15:44:19.562633+00:00 [queued]>
+[2024-11-23T15:45:01.837+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nyc_green_taxi.check_load_tripdata manual__2024-11-23T15:44:19.562633+00:00 [queued]>
+[2024-11-23T15:45:01.838+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-11-23T15:45:01.867+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): check_load_tripdata> on 2024-11-23 15:44:19.562633+00:00
+[2024-11-23T15:45:01.884+0000] {standard_task_runner.py:64} INFO - Started process 8022 to run task
+[2024-11-23T15:45:01.890+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'nyc_green_taxi', 'check_load_tripdata', 'manual__2024-11-23T15:44:19.562633+00:00', '--job-id', '130', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion.py', '--cfg-path', '/tmp/tmplosua69e']
+[2024-11-23T15:45:01.896+0000] {standard_task_runner.py:91} INFO - Job 130: Subtask check_load_tripdata
+[2024-11-23T15:45:01.991+0000] {task_command.py:426} INFO - Running <TaskInstance: nyc_green_taxi.check_load_tripdata manual__2024-11-23T15:44:19.562633+00:00 [running]> on host 10788e79e5f3
+[2024-11-23T15:45:02.171+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='nyc_green_taxi' AIRFLOW_CTX_TASK_ID='check_load_tripdata' AIRFLOW_CTX_EXECUTION_DATE='2024-11-23T15:44:19.562633+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-23T15:44:19.562633+00:00'
+[2024-11-23T15:45:02.175+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-11-23T15:45:02.965+0000] {soda_telemetry.py:61} INFO - Setting up usage telemetry.
+[2024-11-23T15:45:03.075+0000] {logging_mixin.py:188} INFO - Running Soda Scan ...
+[2024-11-23T15:45:03.093+0000] {log.py:101} INFO - [15:45:03] Soda Core 3.4.1
+[2024-11-23T15:45:05.576+0000] {log.py:101} INFO - [15:45:05] Using application default credentials.
+[2024-11-23T15:45:07.363+0000] {log.py:101} INFO - [15:45:07] Scan summary:
+[2024-11-23T15:45:07.365+0000] {log.py:101} INFO - [15:45:07] 1/1 check PASSED: 
+[2024-11-23T15:45:07.366+0000] {log.py:101} INFO - [15:45:07]     green_tripdata in nyc_green_taxi
+[2024-11-23T15:45:07.367+0000] {log.py:101} INFO - [15:45:07]       Schema Check [include/soda/checks/sources/green_tripdata.yml] [PASSED]
+[2024-11-23T15:45:07.368+0000] {log.py:101} INFO - [15:45:07]         schema_measured = [vendor_id INT64, lpep_pickup_datetime TIMESTAMP, lpep_dropoff_datetime TIMESTAMP, store_and_fwd_flag STRING, rate_code_id INT64, pu_location_id INT64, do_location_id INT64, passenger_count INT64, trip_distance FLOAT64, fare_amount FLOAT64, extra FLOAT64, mta_tax FLOAT64, tip_amount FLOAT64, tolls_amount FLOAT64, ehail_fee INT64, improvement_surcharge FLOAT64, total_amount FLOAT64, payment_type INT64, trip_type INT64, congestion_surcharge FLOAT64]
+[2024-11-23T15:45:07.370+0000] {log.py:101} INFO - [15:45:07] All is good. No failures. No warnings. No errors.
+[2024-11-23T15:45:07.371+0000] {log.py:101} INFO - [15:45:07] Sending results to Soda Cloud
+[2024-11-23T15:45:08.946+0000] {log.py:101} INFO - [15:45:08] Soda Cloud Trace: 555428089533952717
+[2024-11-23T15:45:08.979+0000] {logging_mixin.py:188} INFO - INFO   | Soda Core 3.4.1
+DEBUG  | Reading configuration file "include/soda/configuration.yml"
+DEBUG  | Reading SodaCL file "include/soda/checks/sources/green_tripdata.yml"
+DEBUG  | Scan execution starts
+INFO   | Using application default credentials.
+DEBUG  | Query 1.nyc_green_taxi.green_tripdata.schema[green_tripdata]:
+SELECT column_name, data_type, is_nullable FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = 'green_tripdata';
+INFO   | Scan summary:
+DEBUG  | 1/1 query OK
+DEBUG  |   1.nyc_green_taxi.green_tripdata.schema[green_tripdata] [OK] 0:00:01.522699
+INFO   | 1/1 check PASSED: 
+INFO   |     green_tripdata in nyc_green_taxi
+INFO   |       Schema Check [include/soda/checks/sources/green_tripdata.yml] [PASSED]
+INFO   |         schema_measured = [vendor_id INT64, lpep_pickup_datetime TIMESTAMP, lpep_dropoff_datetime TIMESTAMP, store_and_fwd_flag STRING, rate_code_id INT64, pu_location_id INT64, do_location_id INT64, passenger_count INT64, trip_distance FLOAT64, fare_amount FLOAT64, extra FLOAT64, mta_tax FLOAT64, tip_amount FLOAT64, tolls_amount FLOAT64, ehail_fee INT64, improvement_surcharge FLOAT64, total_amount FLOAT64, payment_type INT64, trip_type INT64, congestion_surcharge FLOAT64]
+INFO   | All is good. No failures. No warnings. No errors.
+INFO   | Sending results to Soda Cloud
+INFO   | Soda Cloud Trace: 555428089533952717
+[2024-11-23T15:45:08.981+0000] {data_ingestion.py:139} INFO - Result from check: 0 of type <class 'int'>
+[2024-11-23T15:45:08.982+0000] {python.py:237} INFO - Done. Returned value was: 0
+[2024-11-23T15:45:08.984+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-11-23T15:45:09.049+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=nyc_green_taxi, task_id=check_load_tripdata, run_id=manual__2024-11-23T15:44:19.562633+00:00, execution_date=20241123T154419, start_date=20241123T154501, end_date=20241123T154509
+[2024-11-23T15:45:09.153+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-11-23T15:45:09.193+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-23T15:45:09.198+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

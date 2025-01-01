@@ -1,0 +1,47 @@
+[2024-11-12T08:51:02.481+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-11-12T08:51:02.517+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nyc_green_taxi.transform_data_task manual__2024-11-12T08:50:34.006045+00:00 [queued]>
+[2024-11-12T08:51:02.536+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nyc_green_taxi.transform_data_task manual__2024-11-12T08:50:34.006045+00:00 [queued]>
+[2024-11-12T08:51:02.537+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-11-12T08:51:02.564+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): transform_data_task> on 2024-11-12 08:50:34.006045+00:00
+[2024-11-12T08:51:02.575+0000] {standard_task_runner.py:64} INFO - Started process 106 to run task
+[2024-11-12T08:51:02.581+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'nyc_green_taxi', 'transform_data_task', 'manual__2024-11-12T08:50:34.006045+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion.py', '--cfg-path', '/tmp/tmphsexw4lr']
+[2024-11-12T08:51:02.585+0000] {standard_task_runner.py:91} INFO - Job 11: Subtask transform_data_task
+[2024-11-12T08:51:02.679+0000] {task_command.py:426} INFO - Running <TaskInstance: nyc_green_taxi.transform_data_task manual__2024-11-12T08:50:34.006045+00:00 [running]> on host 23d8db8c711b
+[2024-11-12T08:51:02.860+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='nyc_green_taxi' AIRFLOW_CTX_TASK_ID='transform_data_task' AIRFLOW_CTX_EXECUTION_DATE='2024-11-12T08:50:34.006045+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-12T08:50:34.006045+00:00'
+[2024-11-12T08:51:02.863+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-11-12T08:51:03.208+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-11-12T08:51:03.210+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3791, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 152, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 181, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'lpep _pickup_datetime'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/data_ingestion.py", line 58, in transform
+    df['lpep_pickup_datetime'] = pd.to_datetime(df['lpep _pickup_datetime'], errors='coerce')
+  File "/home/airflow/.local/lib/python3.9/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/home/airflow/.local/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3798, in get_loc
+    raise KeyError(key) from err
+KeyError: 'lpep _pickup_datetime'
+[2024-11-12T08:51:03.242+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=nyc_green_taxi, task_id=transform_data_task, run_id=manual__2024-11-12T08:50:34.006045+00:00, execution_date=20241112T085034, start_date=20241112T085102, end_date=20241112T085103
+[2024-11-12T08:51:03.269+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 11 for task transform_data_task ('lpep _pickup_datetime'; 106)
+[2024-11-12T08:51:03.301+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2024-11-12T08:51:03.350+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-12T08:51:03.355+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

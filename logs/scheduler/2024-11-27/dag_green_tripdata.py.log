@@ -1,0 +1,10 @@
+[2024-11-27T14:00:48.224+0000] {processor.py:161} INFO - Started process (PID=101) to work on /opt/airflow/dags/dag_green_tripdata.py
+[2024-11-27T14:00:48.229+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_green_tripdata.py for tasks to queue
+[2024-11-27T14:00:48.239+0000] {logging_mixin.py:188} INFO - [2024-11-27T14:00:48.236+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_green_tripdata.py
+[2024-11-27T14:00:48.375+0000] {logging_mixin.py:188} INFO - [2024-11-27T14:00:48.374+0000] {graph.py:470} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__nyc_green_tripdata__dbt_transform...
+[2024-11-27T14:00:59.039+0000] {logging_mixin.py:188} INFO - [2024-11-27T14:00:59.038+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__nyc_green_tripdata__dbt_transform for current version: 10.592807926999996
+[2024-11-27T14:00:59.041+0000] {logging_mixin.py:188} INFO - [2024-11-27T14:00:59.040+0000] {graph.py:497} INFO - Cosmos performance: Cache miss for cosmos_cache__nyc_green_tripdata__dbt_transform - skipped
+[2024-11-27T14:00:59.042+0000] {logging_mixin.py:188} INFO - [2024-11-27T14:00:59.042+0000] {graph.py:528} INFO - Trying to parse the dbt project in `/opt/airflow/include/dbt` using dbt ls...
+[2024-11-27T14:00:59.073+0000] {logging_mixin.py:188} INFO - [2024-11-27T14:00:59.067+0000] {graph.py:547} INFO - Partial parse is enabled and the latest partial parse file is /opt/airflow/include/dbt/target/partial_parse.msgpack
+[2024-11-27T14:00:59.175+0000] {logging_mixin.py:188} INFO - [2024-11-27T14:00:59.175+0000] {config.py:332} INFO - Using user-supplied profiles.yml at /opt/airflow/include/dbt/profiles.yml
+[2024-11-27T14:00:59.203+0000] {logging_mixin.py:188} INFO - [2024-11-27T14:00:59.202+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmp8yslp2qt --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev`

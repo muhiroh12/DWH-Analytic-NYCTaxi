@@ -1,0 +1,9 @@
+# dbt_project.yml
+
+name: 'nyc_taxi'
+
+profile: 'nyc_taxi'
+
+models:
+  nyc_taxi:
+    materialized: table

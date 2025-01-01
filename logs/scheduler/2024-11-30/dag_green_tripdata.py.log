@@ -1,0 +1,10 @@
+[2024-11-30T10:04:32.528+0000] {processor.py:161} INFO - Started process (PID=100) to work on /opt/airflow/dags/dag_green_tripdata.py
+[2024-11-30T10:04:32.531+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_green_tripdata.py for tasks to queue
+[2024-11-30T10:04:32.535+0000] {logging_mixin.py:188} INFO - [2024-11-30T10:04:32.535+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_green_tripdata.py
+[2024-11-30T10:04:32.634+0000] {logging_mixin.py:188} INFO - [2024-11-30T10:04:32.633+0000] {graph.py:470} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__nyc_green_tripdata__dbt_transform...
+[2024-11-30T10:04:42.388+0000] {logging_mixin.py:188} INFO - [2024-11-30T10:04:42.388+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__nyc_green_tripdata__dbt_transform for current version: 9.721993975000004
+[2024-11-30T10:04:42.390+0000] {logging_mixin.py:188} INFO - [2024-11-30T10:04:42.389+0000] {graph.py:497} INFO - Cosmos performance: Cache miss for cosmos_cache__nyc_green_tripdata__dbt_transform - skipped
+[2024-11-30T10:04:42.391+0000] {logging_mixin.py:188} INFO - [2024-11-30T10:04:42.391+0000] {graph.py:528} INFO - Trying to parse the dbt project in `/opt/airflow/include/dbt` using dbt ls...
+[2024-11-30T10:04:42.410+0000] {logging_mixin.py:188} INFO - [2024-11-30T10:04:42.405+0000] {graph.py:547} INFO - Partial parse is enabled and the latest partial parse file is /tmp/cosmos/nyc_green_tripdata__dbt_transform/target/partial_parse.msgpack
+[2024-11-30T10:04:42.432+0000] {logging_mixin.py:188} INFO - [2024-11-30T10:04:42.431+0000] {config.py:332} INFO - Using user-supplied profiles.yml at /opt/airflow/include/dbt/profiles.yml
+[2024-11-30T10:04:42.449+0000] {logging_mixin.py:188} INFO - [2024-11-30T10:04:42.448+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmpkyx5d97r --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev`

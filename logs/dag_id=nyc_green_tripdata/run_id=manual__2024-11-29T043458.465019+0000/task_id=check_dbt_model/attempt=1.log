@@ -1,0 +1,56 @@
+[2024-11-29T04:37:08.473+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-11-29T04:37:08.488+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nyc_green_tripdata.check_dbt_model manual__2024-11-29T04:34:58.465019+00:00 [queued]>
+[2024-11-29T04:37:08.496+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nyc_green_tripdata.check_dbt_model manual__2024-11-29T04:34:58.465019+00:00 [queued]>
+[2024-11-29T04:37:08.496+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-11-29T04:37:08.508+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): check_dbt_model> on 2024-11-29 04:34:58.465019+00:00
+[2024-11-29T04:37:08.517+0000] {standard_task_runner.py:64} INFO - Started process 489 to run task
+[2024-11-29T04:37:08.519+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'nyc_green_tripdata', 'check_dbt_model', 'manual__2024-11-29T04:34:58.465019+00:00', '--job-id', '153', '--raw', '--subdir', 'DAGS_FOLDER/dag_green_tripdata.py', '--cfg-path', '/tmp/tmpagdliype']
+[2024-11-29T04:37:08.521+0000] {standard_task_runner.py:91} INFO - Job 153: Subtask check_dbt_model
+[2024-11-29T04:37:08.557+0000] {task_command.py:426} INFO - Running <TaskInstance: nyc_green_tripdata.check_dbt_model manual__2024-11-29T04:34:58.465019+00:00 [running]> on host 39c047f38cb8
+[2024-11-29T04:37:08.617+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='nyc_green_tripdata' AIRFLOW_CTX_TASK_ID='check_dbt_model' AIRFLOW_CTX_EXECUTION_DATE='2024-11-29T04:34:58.465019+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-29T04:34:58.465019+00:00'
+[2024-11-29T04:37:08.619+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-11-29T04:37:08.845+0000] {soda_telemetry.py:61} INFO - Setting up usage telemetry.
+[2024-11-29T04:37:08.883+0000] {logging_mixin.py:188} INFO - Running Soda Scan ...
+[2024-11-29T04:37:08.887+0000] {log.py:101} INFO - [04:37:08] Soda Core 3.4.1
+[2024-11-29T04:37:08.900+0000] {log.py:101} ERROR - [04:37:08] Path "include/soda/checks/transform" does not exist
+[2024-11-29T04:37:10.595+0000] {log.py:101} INFO - [04:37:10] Scan summary:
+[2024-11-29T04:37:10.596+0000] {log.py:101} WARNING - [04:37:10] No valid checks found, 0 checks evaluated.
+[2024-11-29T04:37:10.596+0000] {log.py:101} INFO - [04:37:10] 1 errors.
+[2024-11-29T04:37:10.597+0000] {log.py:101} INFO - [04:37:10] Oops! 1 error. 0 failures. 0 warnings. 0 pass.
+[2024-11-29T04:37:10.597+0000] {log.py:94} INFO - ERRORS:
+[2024-11-29T04:37:10.597+0000] {log.py:101} ERROR - [04:37:10] Path "include/soda/checks/transform" does not exist
+[2024-11-29T04:37:10.614+0000] {log.py:101} INFO - [04:37:10] Sending results to Soda Cloud
+[2024-11-29T04:37:11.582+0000] {log.py:101} INFO - [04:37:11] Soda Cloud Trace: 7638629128095286058
+[2024-11-29T04:37:11.583+0000] {logging_mixin.py:188} INFO - INFO   | Soda Core 3.4.1
+DEBUG  | Reading configuration file "include/soda/configuration.yml"
+ERROR  | Path "include/soda/checks/transform" does not exist
+DEBUG  | Scan execution starts
+INFO   | Scan summary:
+WARNING| No valid checks found, 0 checks evaluated.
+INFO   | 1 errors.
+INFO   | Oops! 1 error. 0 failures. 0 warnings. 0 pass.
+INFO   | Sending results to Soda Cloud
+INFO   | Soda Cloud Trace: 7638629128095286058
+[2024-11-29T04:37:11.583+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-11-29T04:37:11.584+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_green_tripdata.py", line 153, in check_dbt_transform
+    result = check(scan_name, checks_subpath)
+  File "/opt/airflow/include/soda/check_function.py", line 23, in check
+    raise ValueError('Soda Scan failed')
+ValueError: Soda Scan failed
+[2024-11-29T04:37:11.611+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=nyc_green_tripdata, task_id=check_dbt_model, run_id=manual__2024-11-29T04:34:58.465019+00:00, execution_date=20241129T043458, start_date=20241129T043708, end_date=20241129T043711
+[2024-11-29T04:37:11.623+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 153 for task check_dbt_model (Soda Scan failed; 489)
+[2024-11-29T04:37:11.663+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2024-11-29T04:37:11.683+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-29T04:37:11.685+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

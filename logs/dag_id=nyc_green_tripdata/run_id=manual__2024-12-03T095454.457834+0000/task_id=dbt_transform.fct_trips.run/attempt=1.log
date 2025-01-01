@@ -1,0 +1,44 @@
+[2024-12-03T09:57:35.054+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-12-03T09:57:35.091+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nyc_green_tripdata.dbt_transform.fct_trips.run manual__2024-12-03T09:54:54.457834+00:00 [queued]>
+[2024-12-03T09:57:35.116+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nyc_green_tripdata.dbt_transform.fct_trips.run manual__2024-12-03T09:54:54.457834+00:00 [queued]>
+[2024-12-03T09:57:35.117+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-12-03T09:57:35.152+0000] {taskinstance.py:2330} INFO - Executing <Task(DbtRunLocalOperator): dbt_transform.fct_trips.run> on 2024-12-03 09:54:54.457834+00:00
+[2024-12-03T09:57:35.169+0000] {standard_task_runner.py:64} INFO - Started process 10998 to run task
+[2024-12-03T09:57:35.175+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'nyc_green_tripdata', 'dbt_transform.fct_trips.run', 'manual__2024-12-03T09:54:54.457834+00:00', '--job-id', '427', '--raw', '--subdir', 'DAGS_FOLDER/dag_green_tripdata.py', '--cfg-path', '/tmp/tmpxgu_wyc6']
+[2024-12-03T09:57:35.181+0000] {standard_task_runner.py:91} INFO - Job 427: Subtask dbt_transform.fct_trips.run
+[2024-12-03T09:57:35.278+0000] {task_command.py:426} INFO - Running <TaskInstance: nyc_green_tripdata.dbt_transform.fct_trips.run manual__2024-12-03T09:54:54.457834+00:00 [running]> on host 39c047f38cb8
+[2024-12-03T09:57:35.480+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='nyc_green_tripdata' AIRFLOW_CTX_TASK_ID='dbt_transform.fct_trips.run' AIRFLOW_CTX_EXECUTION_DATE='2024-12-03T09:54:54.457834+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-03T09:54:54.457834+00:00'
+[2024-12-03T09:57:35.484+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-12-03T09:57:39.419+0000] {local.py:216} INFO - dbtRunner is available. Using dbtRunner for invoking dbt.
+[2024-12-03T09:57:39.421+0000] {local.py:432} INFO - Cloning project to writable temp directory /tmp/tmpnhi2s2yl from /opt/airflow/include/dbt
+[2024-12-03T09:57:39.431+0000] {local.py:443} INFO - Partial parse is enabled and the latest partial parse file is /tmp/cosmos/nyc_green_tripdata__dbt_transform/target/partial_parse.msgpack
+[2024-12-03T09:57:39.463+0000] {config.py:332} INFO - Using user-supplied profiles.yml at /opt/airflow/include/dbt/profiles.yml
+[2024-12-03T09:57:39.465+0000] {local.py:404} INFO - Trying to run dbtRunner with:
+ ['run', '--models', 'fct_trips', '--project-dir', '/tmp/tmpnhi2s2yl', '--profiles-dir', '/opt/***/include/dbt', '--profile', 'nyc_taxi', '--target', 'dev']
+ in /tmp/tmpnhi2s2yl
+[2024-12-03T09:57:37.063+0000] {logging_mixin.py:188} INFO - 09:57:37  Running with dbt=1.8.7
+[2024-12-03T09:57:38.696+0000] {logging_mixin.py:188} INFO - 09:57:38  Registered adapter: bigquery=1.8.3
+[2024-12-03T09:57:44.756+0000] {logging_mixin.py:188} INFO - 09:57:44  Found 7 models, 34 data tests, 2 sources, 600 macros
+[2024-12-03T09:57:44.765+0000] {logging_mixin.py:188} INFO - 09:57:44
+[2024-12-03T09:57:46.379+0000] {logging_mixin.py:188} INFO - 09:57:46  Concurrency: 1 threads (target='dev')
+[2024-12-03T09:57:46.383+0000] {logging_mixin.py:188} INFO - 09:57:46
+[2024-12-03T09:57:46.395+0000] {logging_mixin.py:188} INFO - 09:57:46  1 of 1 START sql table model nyc_taxi.fct_trips ................................ [RUN]
+[2024-12-03T09:58:01.071+0000] {logging_mixin.py:188} INFO - 09:58:01  1 of 1 OK created sql table model nyc_taxi.fct_trips ........................... [CREATE TABLE (613.5k rows, 107.1 MiB processed) in 14.67s]
+[2024-12-03T09:58:01.083+0000] {logging_mixin.py:188} INFO - 09:58:01
+[2024-12-03T09:58:01.086+0000] {logging_mixin.py:188} INFO - 09:58:01  Finished running 1 table model in 0 hours 0 minutes and 16.32 seconds (16.32s).
+[2024-12-03T09:58:01.772+0000] {logging_mixin.py:188} INFO - 09:58:01
+[2024-12-03T09:58:01.775+0000] {logging_mixin.py:188} INFO - 09:58:01  Completed successfully
+[2024-12-03T09:58:01.778+0000] {logging_mixin.py:188} INFO - 09:58:01
+[2024-12-03T09:58:01.781+0000] {logging_mixin.py:188} INFO - 09:58:01  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[2024-12-03T09:58:03.150+0000] {local.py:196} WARNING - Artifact schema version: https://schemas.getdbt.com/dbt/manifest/v12.json is above dbt-ol supported version 7. This might cause errors.
+[2024-12-03T09:58:03.158+0000] {local.py:196} WARNING - Artifact schema version: https://schemas.getdbt.com/dbt/run-results/v6.json is above dbt-ol supported version 5. This might cause errors.
+[2024-12-03T09:58:03.179+0000] {local.py:490} INFO - Inlets: [Dataset(uri='bigquery/northern-shield-437204-m0.nyc_taxi.dim_time', extra=None), Dataset(uri='bigquery/northern-shield-437204-m0.nyc_taxi.green_tripdata', extra=None)]
+[2024-12-03T09:58:03.180+0000] {local.py:491} INFO - Outlets: [Dataset(uri='bigquery/northern-shield-437204-m0.nyc_taxi.fct_trips', extra=None)]
+[2024-12-03T09:58:03.182+0000] {local.py:590} INFO - Assigning inlets/outlets without DatasetAlias
+[2024-12-03T09:58:03.183+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-12-03T09:58:03.235+0000] {dag.py:3947} INFO - Setting next_dagrun for nyc_green_tripdata to None, run_after=None
+[2024-12-03T09:58:03.364+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-12-03T09:58:03.433+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=nyc_green_tripdata, task_id=dbt_transform.fct_trips.run, run_id=manual__2024-12-03T09:54:54.457834+00:00, execution_date=20241203T095454, start_date=20241203T095735, end_date=20241203T095803
+[2024-12-03T09:58:03.537+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-12-03T09:58:03.599+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-03T09:58:03.609+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

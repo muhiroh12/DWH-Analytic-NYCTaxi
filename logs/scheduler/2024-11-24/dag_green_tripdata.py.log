@@ -1,0 +1,30 @@
+[2024-11-24T00:24:47.740+0000] {processor.py:161} INFO - Started process (PID=3450) to work on /opt/airflow/dags/dag_green_tripdata.py
+[2024-11-24T00:24:47.742+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_green_tripdata.py for tasks to queue
+[2024-11-24T00:24:47.744+0000] {logging_mixin.py:188} INFO - [2024-11-24T00:24:47.744+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_green_tripdata.py
+[2024-11-24T00:24:47.838+0000] {logging_mixin.py:188} INFO - [2024-11-24T00:24:47.838+0000] {graph.py:470} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__nyc_green_tripdata__dbt_transform...
+[2024-11-24T00:24:51.691+0000] {logging_mixin.py:188} INFO - [2024-11-24T00:24:51.691+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__nyc_green_tripdata__dbt_transform for current version: 3.8132900719992904
+[2024-11-24T00:24:51.693+0000] {logging_mixin.py:188} INFO - [2024-11-24T00:24:51.692+0000] {graph.py:487} INFO - Cosmos performance [9dc0f17d4869|3450]: The cache size for cosmos_cache__nyc_green_tripdata__dbt_transform is 21082
+[2024-11-24T00:24:51.697+0000] {logging_mixin.py:188} INFO - [2024-11-24T00:24:51.696+0000] {graph.py:495} INFO - Cosmos performance: Cache hit for cosmos_cache__nyc_green_tripdata__dbt_transform - 13e1156457be026c793e483d09b14347,16a7af22baa01082ccbc983a81f25573
+[2024-11-24T00:24:51.699+0000] {logging_mixin.py:188} INFO - [2024-11-24T00:24:51.697+0000] {graph.py:412} INFO - Total nodes: 28
+[2024-11-24T00:24:51.700+0000] {logging_mixin.py:188} INFO - [2024-11-24T00:24:51.699+0000] {graph.py:413} INFO - Total filtered nodes: 28
+[2024-11-24T00:24:51.701+0000] {logging_mixin.py:188} INFO - [2024-11-24T00:24:51.701+0000] {converter.py:264} INFO - Cosmos performance (nyc_green_tripdata__dbt_transform) -  [9dc0f17d4869|3450]: It took 3.86s to parse the dbt project for DAG using LoadMode.DBT_LS_CACHE
+[2024-11-24T00:24:55.741+0000] {logging_mixin.py:188} INFO - [2024-11-24T00:24:55.740+0000] {converter.py:308} INFO - Cosmos performance (nyc_green_tripdata__dbt_transform) - [9dc0f17d4869|3450]: It took 0.0199s to build the Airflow DAG.
+[2024-11-24T00:24:55.745+0000] {processor.py:840} INFO - DAG(s) 'nyc_green_tripdata' retrieved from /opt/airflow/dags/dag_green_tripdata.py
+[2024-11-24T00:24:55.878+0000] {logging_mixin.py:188} INFO - [2024-11-24T00:24:55.877+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-11-24T00:24:55.914+0000] {logging_mixin.py:188} INFO - [2024-11-24T00:24:55.914+0000] {dag.py:3947} INFO - Setting next_dagrun for nyc_green_tripdata to 2024-11-23 00:00:00+00:00, run_after=2024-11-23 00:00:00+00:00
+[2024-11-24T00:24:55.961+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_green_tripdata.py took 4.217 seconds
+[2024-11-24T04:43:29.389+0000] {processor.py:161} INFO - Started process (PID=3452) to work on /opt/airflow/dags/dag_green_tripdata.py
+[2024-11-24T04:43:29.390+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_green_tripdata.py for tasks to queue
+[2024-11-24T04:43:29.392+0000] {logging_mixin.py:188} INFO - [2024-11-24T04:43:29.392+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_green_tripdata.py
+[2024-11-24T04:43:29.477+0000] {logging_mixin.py:188} INFO - [2024-11-24T04:43:29.477+0000] {graph.py:470} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__nyc_green_tripdata__dbt_transform...
+[2024-11-24T04:43:31.600+0000] {logging_mixin.py:188} INFO - [2024-11-24T04:43:31.599+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__nyc_green_tripdata__dbt_transform for current version: 2.0907975409991195
+[2024-11-24T04:43:31.600+0000] {logging_mixin.py:188} INFO - [2024-11-24T04:43:31.600+0000] {graph.py:487} INFO - Cosmos performance [9dc0f17d4869|3452]: The cache size for cosmos_cache__nyc_green_tripdata__dbt_transform is 21082
+[2024-11-24T04:43:31.602+0000] {logging_mixin.py:188} INFO - [2024-11-24T04:43:31.602+0000] {graph.py:495} INFO - Cosmos performance: Cache hit for cosmos_cache__nyc_green_tripdata__dbt_transform - 13e1156457be026c793e483d09b14347,16a7af22baa01082ccbc983a81f25573
+[2024-11-24T04:43:31.603+0000] {logging_mixin.py:188} INFO - [2024-11-24T04:43:31.603+0000] {graph.py:412} INFO - Total nodes: 28
+[2024-11-24T04:43:31.604+0000] {logging_mixin.py:188} INFO - [2024-11-24T04:43:31.604+0000] {graph.py:413} INFO - Total filtered nodes: 28
+[2024-11-24T04:43:31.605+0000] {logging_mixin.py:188} INFO - [2024-11-24T04:43:31.605+0000] {converter.py:264} INFO - Cosmos performance (nyc_green_tripdata__dbt_transform) -  [9dc0f17d4869|3452]: It took 2.13s to parse the dbt project for DAG using LoadMode.DBT_LS_CACHE
+[2024-11-24T04:43:31.614+0000] {logging_mixin.py:188} INFO - [2024-11-24T04:43:31.614+0000] {converter.py:308} INFO - Cosmos performance (nyc_green_tripdata__dbt_transform) - [9dc0f17d4869|3452]: It took 0.00958s to build the Airflow DAG.
+[2024-11-24T04:43:31.616+0000] {processor.py:840} INFO - DAG(s) 'nyc_green_tripdata' retrieved from /opt/airflow/dags/dag_green_tripdata.py
+[2024-11-24T04:43:31.645+0000] {logging_mixin.py:188} INFO - [2024-11-24T04:43:31.644+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-11-24T04:43:31.666+0000] {logging_mixin.py:188} INFO - [2024-11-24T04:43:31.665+0000] {dag.py:3947} INFO - Setting next_dagrun for nyc_green_tripdata to 2024-11-23 00:00:00+00:00, run_after=2024-11-23 00:00:00+00:00
+[2024-11-24T04:43:31.692+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_green_tripdata.py took 2.325 seconds

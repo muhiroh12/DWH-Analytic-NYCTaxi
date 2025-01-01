@@ -1,0 +1,38 @@
+[2024-11-13T15:40:15.394+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-11-13T15:40:15.427+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nyc_green_taxi.load_zone_map_to_bq manual__2024-11-13T15:39:43.304096+00:00 [queued]>
+[2024-11-13T15:40:15.444+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nyc_green_taxi.load_zone_map_to_bq manual__2024-11-13T15:39:43.304096+00:00 [queued]>
+[2024-11-13T15:40:15.445+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-11-13T15:40:15.473+0000] {taskinstance.py:2330} INFO - Executing <Task(GCSToBigQueryOperator): load_zone_map_to_bq> on 2024-11-13 15:39:43.304096+00:00
+[2024-11-13T15:40:15.485+0000] {standard_task_runner.py:64} INFO - Started process 651 to run task
+[2024-11-13T15:40:15.490+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'nyc_green_taxi', 'load_zone_map_to_bq', 'manual__2024-11-13T15:39:43.304096+00:00', '--job-id', '194', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion.py', '--cfg-path', '/tmp/tmpmn7496cv']
+[2024-11-13T15:40:15.495+0000] {standard_task_runner.py:91} INFO - Job 194: Subtask load_zone_map_to_bq
+[2024-11-13T15:40:15.576+0000] {task_command.py:426} INFO - Running <TaskInstance: nyc_green_taxi.load_zone_map_to_bq manual__2024-11-13T15:39:43.304096+00:00 [running]> on host 7a2cfb7b2df5
+[2024-11-13T15:40:15.752+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='nyc_green_taxi' AIRFLOW_CTX_TASK_ID='load_zone_map_to_bq' AIRFLOW_CTX_EXECUTION_DATE='2024-11-13T15:39:43.304096+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-13T15:39:43.304096+00:00'
+[2024-11-13T15:40:15.755+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-11-13T15:40:15.778+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2024-11-13T15:40:15.780+0000] {connection.py:274} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2024-11-13T15:40:15.782+0000] {base.py:84} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2024-11-13T15:40:15.784+0000] {gcs_to_bigquery.py:381} INFO - Using existing BigQuery table for storing data...
+[2024-11-13T15:40:15.882+0000] {gcs_to_bigquery.py:385} INFO - Executing: {'load': {'autodetect': True, 'createDisposition': 'CREATE_IF_NEEDED', 'destinationTable': {'projectId': 'northern-shield-437204-m0', 'datasetId': 'nyc_taxi', 'tableId': 'zone_map'}, 'sourceFormat': 'PARQUET', 'sourceUris': ['gs://green_taxi_bucket/transform/taxi_zone_lookup.parquet'], 'writeDisposition': 'WRITE_APPEND', 'ignoreUnknownValues': False}}
+[2024-11-13T15:40:15.885+0000] {bigquery.py:1702} INFO - Inserting job ***_nyc_green_taxi_load_zone_map_to_bq_2024_11_13T15_39_43_304096_00_00_27a675d8478d7ea101dd75ab21f15025
+[2024-11-13T15:40:19.612+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-11-13T15:40:19.614+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/google/cloud/transfers/gcs_to_bigquery.py", line 446, in execute
+    job.result(timeout=self.result_timeout, retry=self.result_retry)
+  File "/home/airflow/.local/lib/python3.9/site-packages/google/cloud/bigquery/job/base.py", line 971, in result
+    return super(_AsyncJob, self).result(timeout=timeout, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/google/api_core/future/polling.py", line 261, in result
+    raise self._exception
+google.api_core.exceptions.BadRequest: 400 Provided Schema does not match Table northern-shield-437204-m0:nyc_taxi.zone_map. Cannot add fields (field: location_id); reason: invalid, message: Provided Schema does not match Table northern-shield-437204-m0:nyc_taxi.zone_map. Cannot add fields (field: location_id)
+[2024-11-13T15:40:19.650+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=nyc_green_taxi, task_id=load_zone_map_to_bq, run_id=manual__2024-11-13T15:39:43.304096+00:00, execution_date=20241113T153943, start_date=20241113T154015, end_date=20241113T154019
+[2024-11-13T15:40:19.678+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 194 for task load_zone_map_to_bq (400 Provided Schema does not match Table northern-shield-437204-m0:nyc_taxi.zone_map. Cannot add fields (field: location_id); reason: invalid, message: Provided Schema does not match Table northern-shield-437204-m0:nyc_taxi.zone_map. Cannot add fields (field: location_id); 651)
+[2024-11-13T15:40:19.732+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2024-11-13T15:40:19.774+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-13T15:40:19.778+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

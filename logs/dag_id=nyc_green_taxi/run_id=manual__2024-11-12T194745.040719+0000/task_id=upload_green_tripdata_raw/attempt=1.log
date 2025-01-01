@@ -1,0 +1,20 @@
+[2024-11-12T19:47:53.514+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-11-12T19:47:53.530+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nyc_green_taxi.upload_green_tripdata_raw manual__2024-11-12T19:47:45.040719+00:00 [queued]>
+[2024-11-12T19:47:53.538+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nyc_green_taxi.upload_green_tripdata_raw manual__2024-11-12T19:47:45.040719+00:00 [queued]>
+[2024-11-12T19:47:53.538+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-11-12T19:47:53.549+0000] {taskinstance.py:2330} INFO - Executing <Task(LocalFilesystemToGCSOperator): upload_green_tripdata_raw> on 2024-11-12 19:47:45.040719+00:00
+[2024-11-12T19:47:53.555+0000] {standard_task_runner.py:64} INFO - Started process 131 to run task
+[2024-11-12T19:47:53.557+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'nyc_green_taxi', 'upload_green_tripdata_raw', 'manual__2024-11-12T19:47:45.040719+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion.py', '--cfg-path', '/tmp/tmps0dejaml']
+[2024-11-12T19:47:53.559+0000] {standard_task_runner.py:91} INFO - Job 25: Subtask upload_green_tripdata_raw
+[2024-11-12T19:47:53.596+0000] {task_command.py:426} INFO - Running <TaskInstance: nyc_green_taxi.upload_green_tripdata_raw manual__2024-11-12T19:47:45.040719+00:00 [running]> on host 7a2cfb7b2df5
+[2024-11-12T19:47:53.664+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='nyc_green_taxi' AIRFLOW_CTX_TASK_ID='upload_green_tripdata_raw' AIRFLOW_CTX_EXECUTION_DATE='2024-11-12T19:47:45.040719+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-12T19:47:45.040719+00:00'
+[2024-11-12T19:47:53.665+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-11-12T19:47:53.676+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2024-11-12T19:47:53.677+0000] {connection.py:274} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2024-11-12T19:47:53.677+0000] {base.py:84} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2024-11-12T19:47:56.506+0000] {gcs.py:560} INFO - File /opt/***/dataset/raw/nyc_taxi/green_tripdata_2023-01.parquet uploaded to raw/green_tripdata_2023-01.parquet in green_taxi_bucket bucket
+[2024-11-12T19:47:56.506+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-11-12T19:47:56.515+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=nyc_green_taxi, task_id=upload_green_tripdata_raw, run_id=manual__2024-11-12T19:47:45.040719+00:00, execution_date=20241112T194745, start_date=20241112T194753, end_date=20241112T194756
+[2024-11-12T19:47:56.561+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-11-12T19:47:56.586+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-11-12T19:47:56.588+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

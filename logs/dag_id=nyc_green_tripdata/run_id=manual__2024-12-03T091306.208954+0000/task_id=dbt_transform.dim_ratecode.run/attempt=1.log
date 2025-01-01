@@ -1,0 +1,44 @@
+[2024-12-03T09:14:22.526+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-12-03T09:14:22.565+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nyc_green_tripdata.dbt_transform.dim_ratecode.run manual__2024-12-03T09:13:06.208954+00:00 [queued]>
+[2024-12-03T09:14:22.590+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nyc_green_tripdata.dbt_transform.dim_ratecode.run manual__2024-12-03T09:13:06.208954+00:00 [queued]>
+[2024-12-03T09:14:22.592+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-12-03T09:14:22.624+0000] {taskinstance.py:2330} INFO - Executing <Task(DbtRunLocalOperator): dbt_transform.dim_ratecode.run> on 2024-12-03 09:13:06.208954+00:00
+[2024-12-03T09:14:22.645+0000] {standard_task_runner.py:64} INFO - Started process 8484 to run task
+[2024-12-03T09:14:22.654+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'nyc_green_tripdata', 'dbt_transform.dim_ratecode.run', 'manual__2024-12-03T09:13:06.208954+00:00', '--job-id', '340', '--raw', '--subdir', 'DAGS_FOLDER/dag_green_tripdata.py', '--cfg-path', '/tmp/tmpdfq5hovo']
+[2024-12-03T09:14:22.663+0000] {standard_task_runner.py:91} INFO - Job 340: Subtask dbt_transform.dim_ratecode.run
+[2024-12-03T09:14:22.776+0000] {task_command.py:426} INFO - Running <TaskInstance: nyc_green_tripdata.dbt_transform.dim_ratecode.run manual__2024-12-03T09:13:06.208954+00:00 [running]> on host 39c047f38cb8
+[2024-12-03T09:14:23.005+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='nyc_green_tripdata' AIRFLOW_CTX_TASK_ID='dbt_transform.dim_ratecode.run' AIRFLOW_CTX_EXECUTION_DATE='2024-12-03T09:13:06.208954+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-03T09:13:06.208954+00:00'
+[2024-12-03T09:14:23.009+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-12-03T09:14:28.025+0000] {local.py:216} INFO - dbtRunner is available. Using dbtRunner for invoking dbt.
+[2024-12-03T09:14:28.027+0000] {local.py:432} INFO - Cloning project to writable temp directory /tmp/tmpiqfmk667 from /opt/airflow/include/dbt
+[2024-12-03T09:14:28.036+0000] {local.py:443} INFO - Partial parse is enabled and the latest partial parse file is /tmp/cosmos/nyc_green_tripdata__dbt_transform/target/partial_parse.msgpack
+[2024-12-03T09:14:28.084+0000] {config.py:332} INFO - Using user-supplied profiles.yml at /opt/airflow/include/dbt/profiles.yml
+[2024-12-03T09:14:28.085+0000] {local.py:404} INFO - Trying to run dbtRunner with:
+ ['run', '--models', 'dim_ratecode', '--project-dir', '/tmp/tmpiqfmk667', '--profiles-dir', '/opt/***/include/dbt', '--profile', 'nyc_taxi', '--target', 'dev']
+ in /tmp/tmpiqfmk667
+[2024-12-03T09:14:28.356+0000] {logging_mixin.py:188} INFO - 09:14:28  Running with dbt=1.8.7
+[2024-12-03T09:14:30.216+0000] {logging_mixin.py:188} INFO - 09:14:30  Registered adapter: bigquery=1.8.3
+[2024-12-03T09:14:34.601+0000] {logging_mixin.py:188} INFO - 09:14:34  Found 7 models, 34 data tests, 2 sources, 600 macros
+[2024-12-03T09:14:34.611+0000] {logging_mixin.py:188} INFO - 09:14:34
+[2024-12-03T09:14:36.201+0000] {logging_mixin.py:188} INFO - 09:14:36  Concurrency: 1 threads (target='dev')
+[2024-12-03T09:14:36.203+0000] {logging_mixin.py:188} INFO - 09:14:36
+[2024-12-03T09:14:36.212+0000] {logging_mixin.py:188} INFO - 09:14:36  1 of 1 START sql table model nyc_taxi.dim_ratecode ............................. [RUN]
+[2024-12-03T09:14:40.984+0000] {logging_mixin.py:188} INFO - 09:14:40  1 of 1 OK created sql table model nyc_taxi.dim_ratecode ........................ [CREATE TABLE (6.0 rows, 3.0 MiB processed) in 4.76s]
+[2024-12-03T09:14:41.001+0000] {logging_mixin.py:188} INFO - 09:14:41
+[2024-12-03T09:14:41.005+0000] {logging_mixin.py:188} INFO - 09:14:41  Finished running 1 table model in 0 hours 0 minutes and 6.39 seconds (6.39s).
+[2024-12-03T09:14:42.077+0000] {logging_mixin.py:188} INFO - 09:14:42
+[2024-12-03T09:14:42.081+0000] {logging_mixin.py:188} INFO - 09:14:42  Completed successfully
+[2024-12-03T09:14:42.084+0000] {logging_mixin.py:188} INFO - 09:14:42
+[2024-12-03T09:14:42.088+0000] {logging_mixin.py:188} INFO - 09:14:42  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[2024-12-03T09:14:43.363+0000] {local.py:196} WARNING - Artifact schema version: https://schemas.getdbt.com/dbt/manifest/v12.json is above dbt-ol supported version 7. This might cause errors.
+[2024-12-03T09:14:43.365+0000] {local.py:196} WARNING - Artifact schema version: https://schemas.getdbt.com/dbt/run-results/v6.json is above dbt-ol supported version 5. This might cause errors.
+[2024-12-03T09:14:43.385+0000] {local.py:490} INFO - Inlets: [Dataset(uri='bigquery/northern-shield-437204-m0.nyc_taxi.green_tripdata', extra=None)]
+[2024-12-03T09:14:43.387+0000] {local.py:491} INFO - Outlets: [Dataset(uri='bigquery/northern-shield-437204-m0.nyc_taxi.dim_ratecode', extra=None)]
+[2024-12-03T09:14:43.388+0000] {local.py:590} INFO - Assigning inlets/outlets without DatasetAlias
+[2024-12-03T09:14:43.389+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-12-03T09:14:43.531+0000] {dag.py:3947} INFO - Setting next_dagrun for nyc_green_tripdata to None, run_after=None
+[2024-12-03T09:14:43.640+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-12-03T09:14:43.721+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=nyc_green_tripdata, task_id=dbt_transform.dim_ratecode.run, run_id=manual__2024-12-03T09:13:06.208954+00:00, execution_date=20241203T091306, start_date=20241203T091422, end_date=20241203T091443
+[2024-12-03T09:14:43.895+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-12-03T09:14:43.965+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-03T09:14:43.968+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,15 @@
+# include/soda/configuration.yml
+data_source nyc_green_taxi:
+  type: bigquery
+  connection:
+    account_info_json_path: /opt/airflow/include/keys/service_account.json
+    auth_scopes:
+    - https://www.googleapis.com/auth/bigquery
+    - https://www.googleapis.com/auth/cloud-platform
+    - https://www.googleapis.com/auth/drive
+    project_id: 'northern-shield-437204-m0'
+    dataset: nyc_taxi
+soda_cloud:
+  host: cloud.soda.io
+  api_key_id: 647c62ad-a356-490c-ac11-485bd8515d72
+  api_key_secret: EleeJhZDaIpP5NvH6r0x4mUMpR7oruvO9KUNGsrmAQdqk8VSsIFSgA

@@ -1,0 +1,413 @@
+[2024-11-25T17:16:43.699+0000] {processor.py:161} INFO - Started process (PID=101) to work on /opt/airflow/dags/data_ingestion.py
+[2024-11-25T17:16:43.702+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_ingestion.py for tasks to queue
+[2024-11-25T17:16:43.705+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:16:43.705+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/data_ingestion.py
+[2024-11-25T17:16:43.787+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:16:43.787+0000] {graph.py:470} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__nyc_green_taxi__transform...
+[2024-11-25T17:16:50.625+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:16:50.624+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__nyc_green_taxi__transform for current version: 6.80330490499999
+[2024-11-25T17:16:50.627+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:16:50.626+0000] {graph.py:497} INFO - Cosmos performance: Cache miss for cosmos_cache__nyc_green_taxi__transform - skipped
+[2024-11-25T17:16:50.628+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:16:50.628+0000] {graph.py:528} INFO - Trying to parse the dbt project in `/opt/airflow/include/dbt` using dbt ls...
+[2024-11-25T17:16:50.648+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:16:50.647+0000] {graph.py:547} INFO - Partial parse is enabled and the latest partial parse file is /opt/airflow/include/dbt/target/partial_parse.msgpack
+[2024-11-25T17:16:50.725+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:16:50.725+0000] {config.py:332} INFO - Using user-supplied profiles.yml at /opt/airflow/include/dbt/profiles.yml
+[2024-11-25T17:16:50.748+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:16:50.748+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmphdkcojz0 --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev`
+[2024-11-25T17:17:00.877+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:17:00.876+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt ls --output json --project-dir /tmp/tmphdkcojz0 --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev --select path:models/transform`
+[2024-11-25T17:17:12.828+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:17:12.827+0000] {timeout.py:68} ERROR - Process timed out, PID: 101
+[2024-11-25T17:17:43.653+0000] {processor.py:161} INFO - Started process (PID=158) to work on /opt/airflow/dags/data_ingestion.py
+[2024-11-25T17:17:43.655+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_ingestion.py for tasks to queue
+[2024-11-25T17:17:43.660+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:17:43.659+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/data_ingestion.py
+[2024-11-25T17:17:43.739+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:17:43.738+0000] {graph.py:470} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__nyc_green_taxi__transform...
+[2024-11-25T17:17:45.499+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:17:45.499+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__nyc_green_taxi__transform for current version: 1.7296906859999979
+[2024-11-25T17:17:45.500+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:17:45.500+0000] {graph.py:497} INFO - Cosmos performance: Cache miss for cosmos_cache__nyc_green_taxi__transform - skipped
+[2024-11-25T17:17:45.502+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:17:45.501+0000] {graph.py:528} INFO - Trying to parse the dbt project in `/opt/airflow/include/dbt` using dbt ls...
+[2024-11-25T17:17:45.517+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:17:45.516+0000] {graph.py:547} INFO - Partial parse is enabled and the latest partial parse file is /opt/airflow/include/dbt/target/partial_parse.msgpack
+[2024-11-25T17:17:45.598+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:17:45.597+0000] {config.py:332} INFO - Using user-supplied profiles.yml at /opt/airflow/include/dbt/profiles.yml
+[2024-11-25T17:17:45.618+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:17:45.617+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmp1e86f0sv --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev`
+[2024-11-25T17:18:03.415+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:18:03.414+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt ls --output json --project-dir /tmp/tmp1e86f0sv --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev --select path:models/transform`
+[2024-11-25T17:18:12.635+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:18:12.634+0000] {timeout.py:68} ERROR - Process timed out, PID: 158
+[2024-11-25T17:18:43.642+0000] {processor.py:161} INFO - Started process (PID=214) to work on /opt/airflow/dags/data_ingestion.py
+[2024-11-25T17:18:43.644+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_ingestion.py for tasks to queue
+[2024-11-25T17:18:43.649+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:18:43.648+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/data_ingestion.py
+[2024-11-25T17:18:43.727+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:18:43.727+0000] {graph.py:470} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__nyc_green_taxi__transform...
+[2024-11-25T17:18:45.537+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:18:45.537+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__nyc_green_taxi__transform for current version: 1.7815155810000078
+[2024-11-25T17:18:45.538+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:18:45.538+0000] {graph.py:497} INFO - Cosmos performance: Cache miss for cosmos_cache__nyc_green_taxi__transform - skipped
+[2024-11-25T17:18:45.539+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:18:45.539+0000] {graph.py:528} INFO - Trying to parse the dbt project in `/opt/airflow/include/dbt` using dbt ls...
+[2024-11-25T17:18:45.557+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:18:45.556+0000] {graph.py:547} INFO - Partial parse is enabled and the latest partial parse file is /opt/airflow/include/dbt/target/partial_parse.msgpack
+[2024-11-25T17:18:45.639+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:18:45.638+0000] {config.py:332} INFO - Using user-supplied profiles.yml at /opt/airflow/include/dbt/profiles.yml
+[2024-11-25T17:18:45.658+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:18:45.658+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmpnnl0atck --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev`
+[2024-11-25T17:18:51.644+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:18:51.643+0000] {process_utils.py:263} INFO - Waiting up to 5 seconds for processes to exit...
+[2024-11-25T17:20:47.248+0000] {processor.py:161} INFO - Started process (PID=102) to work on /opt/airflow/dags/data_ingestion.py
+[2024-11-25T17:20:47.251+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_ingestion.py for tasks to queue
+[2024-11-25T17:20:47.256+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:20:47.255+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/data_ingestion.py
+[2024-11-25T17:20:47.337+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:20:47.336+0000] {graph.py:470} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__nyc_green_taxi__transform...
+[2024-11-25T17:20:53.989+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:20:53.988+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__nyc_green_taxi__transform for current version: 6.610040154000046
+[2024-11-25T17:20:53.990+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:20:53.990+0000] {graph.py:497} INFO - Cosmos performance: Cache miss for cosmos_cache__nyc_green_taxi__transform - skipped
+[2024-11-25T17:20:53.991+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:20:53.991+0000] {graph.py:528} INFO - Trying to parse the dbt project in `/opt/airflow/include/dbt` using dbt ls...
+[2024-11-25T17:20:54.008+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:20:54.006+0000] {graph.py:547} INFO - Partial parse is enabled and the latest partial parse file is /opt/airflow/include/dbt/target/partial_parse.msgpack
+[2024-11-25T17:20:54.078+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:20:54.078+0000] {config.py:332} INFO - Using user-supplied profiles.yml at /opt/airflow/include/dbt/profiles.yml
+[2024-11-25T17:20:54.104+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:20:54.103+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmpp63m_peq --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev`
+[2024-11-25T17:21:06.242+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:21:06.241+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt ls --output json --project-dir /tmp/tmpp63m_peq --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev --select path:models/transform`
+[2024-11-25T17:21:16.343+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:21:16.342+0000] {timeout.py:68} ERROR - Process timed out, PID: 102
+[2024-11-25T17:21:47.368+0000] {processor.py:161} INFO - Started process (PID=159) to work on /opt/airflow/dags/data_ingestion.py
+[2024-11-25T17:21:47.370+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_ingestion.py for tasks to queue
+[2024-11-25T17:21:47.374+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:21:47.374+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/data_ingestion.py
+[2024-11-25T17:21:47.460+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:21:47.459+0000] {graph.py:470} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__nyc_green_taxi__transform...
+[2024-11-25T17:21:49.452+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:21:49.452+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__nyc_green_taxi__transform for current version: 1.9622270370000479
+[2024-11-25T17:21:49.453+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:21:49.453+0000] {graph.py:497} INFO - Cosmos performance: Cache miss for cosmos_cache__nyc_green_taxi__transform - skipped
+[2024-11-25T17:21:49.455+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:21:49.454+0000] {graph.py:528} INFO - Trying to parse the dbt project in `/opt/airflow/include/dbt` using dbt ls...
+[2024-11-25T17:21:49.473+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:21:49.472+0000] {graph.py:547} INFO - Partial parse is enabled and the latest partial parse file is /opt/airflow/include/dbt/target/partial_parse.msgpack
+[2024-11-25T17:21:49.568+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:21:49.568+0000] {config.py:332} INFO - Using user-supplied profiles.yml at /opt/airflow/include/dbt/profiles.yml
+[2024-11-25T17:21:49.593+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:21:49.593+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmp4frozj3x --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev`
+[2024-11-25T17:22:00.536+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:22:00.535+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt ls --output json --project-dir /tmp/tmp4frozj3x --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev --select path:models/transform`
+[2024-11-25T17:22:16.514+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:22:16.513+0000] {timeout.py:68} ERROR - Process timed out, PID: 159
+[2024-11-25T17:22:47.549+0000] {processor.py:161} INFO - Started process (PID=249) to work on /opt/airflow/dags/data_ingestion.py
+[2024-11-25T17:22:47.551+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_ingestion.py for tasks to queue
+[2024-11-25T17:22:47.555+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:22:47.554+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/data_ingestion.py
+[2024-11-25T17:22:47.638+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:22:47.637+0000] {graph.py:470} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__nyc_green_taxi__transform...
+[2024-11-25T17:22:49.292+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:22:49.291+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__nyc_green_taxi__transform for current version: 1.6017209089999938
+[2024-11-25T17:22:49.294+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:22:49.294+0000] {graph.py:497} INFO - Cosmos performance: Cache miss for cosmos_cache__nyc_green_taxi__transform - skipped
+[2024-11-25T17:22:49.296+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:22:49.295+0000] {graph.py:528} INFO - Trying to parse the dbt project in `/opt/airflow/include/dbt` using dbt ls...
+[2024-11-25T17:22:49.315+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:22:49.314+0000] {graph.py:547} INFO - Partial parse is enabled and the latest partial parse file is /opt/airflow/include/dbt/target/partial_parse.msgpack
+[2024-11-25T17:22:49.388+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:22:49.388+0000] {config.py:332} INFO - Using user-supplied profiles.yml at /opt/airflow/include/dbt/profiles.yml
+[2024-11-25T17:22:49.408+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:22:49.408+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmpuaxies7q --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev`
+[2024-11-25T17:23:05.574+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:23:05.573+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt ls --output json --project-dir /tmp/tmpuaxies7q --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev --select path:models/transform`
+[2024-11-25T17:23:16.777+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:23:16.776+0000] {timeout.py:68} ERROR - Process timed out, PID: 249
+[2024-11-25T17:23:47.681+0000] {processor.py:161} INFO - Started process (PID=338) to work on /opt/airflow/dags/data_ingestion.py
+[2024-11-25T17:23:47.683+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_ingestion.py for tasks to queue
+[2024-11-25T17:23:47.688+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:23:47.687+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/data_ingestion.py
+[2024-11-25T17:23:47.779+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:23:47.778+0000] {graph.py:470} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__nyc_green_taxi__transform...
+[2024-11-25T17:23:49.580+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:23:49.579+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__nyc_green_taxi__transform for current version: 1.764261261999991
+[2024-11-25T17:23:49.581+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:23:49.581+0000] {graph.py:497} INFO - Cosmos performance: Cache miss for cosmos_cache__nyc_green_taxi__transform - skipped
+[2024-11-25T17:23:49.583+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:23:49.582+0000] {graph.py:528} INFO - Trying to parse the dbt project in `/opt/airflow/include/dbt` using dbt ls...
+[2024-11-25T17:23:49.602+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:23:49.600+0000] {graph.py:547} INFO - Partial parse is enabled and the latest partial parse file is /opt/airflow/include/dbt/target/partial_parse.msgpack
+[2024-11-25T17:23:49.701+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:23:49.700+0000] {config.py:332} INFO - Using user-supplied profiles.yml at /opt/airflow/include/dbt/profiles.yml
+[2024-11-25T17:23:49.728+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:23:49.727+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmpptnrm216 --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev`
+[2024-11-25T17:24:00.406+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:24:00.405+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt ls --output json --project-dir /tmp/tmpptnrm216 --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev --select path:models/transform`
+[2024-11-25T17:24:16.951+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:24:16.950+0000] {timeout.py:68} ERROR - Process timed out, PID: 338
+[2024-11-25T17:24:47.714+0000] {processor.py:161} INFO - Started process (PID=427) to work on /opt/airflow/dags/data_ingestion.py
+[2024-11-25T17:24:47.716+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_ingestion.py for tasks to queue
+[2024-11-25T17:24:47.720+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:24:47.719+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/data_ingestion.py
+[2024-11-25T17:24:47.796+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:24:47.796+0000] {graph.py:470} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__nyc_green_taxi__transform...
+[2024-11-25T17:24:49.619+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:24:49.619+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__nyc_green_taxi__transform for current version: 1.794984758000055
+[2024-11-25T17:24:49.620+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:24:49.620+0000] {graph.py:497} INFO - Cosmos performance: Cache miss for cosmos_cache__nyc_green_taxi__transform - skipped
+[2024-11-25T17:24:49.622+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:24:49.621+0000] {graph.py:528} INFO - Trying to parse the dbt project in `/opt/airflow/include/dbt` using dbt ls...
+[2024-11-25T17:24:49.636+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:24:49.636+0000] {graph.py:547} INFO - Partial parse is enabled and the latest partial parse file is /opt/airflow/include/dbt/target/partial_parse.msgpack
+[2024-11-25T17:24:49.722+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:24:49.721+0000] {config.py:332} INFO - Using user-supplied profiles.yml at /opt/airflow/include/dbt/profiles.yml
+[2024-11-25T17:24:49.747+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:24:49.746+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmp64um58qq --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev`
+[2024-11-25T17:24:59.977+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:24:59.975+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt ls --output json --project-dir /tmp/tmp64um58qq --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev --select path:models/transform`
+[2024-11-25T17:25:16.861+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:25:16.860+0000] {timeout.py:68} ERROR - Process timed out, PID: 427
+[2024-11-25T17:25:47.736+0000] {processor.py:161} INFO - Started process (PID=517) to work on /opt/airflow/dags/data_ingestion.py
+[2024-11-25T17:25:47.738+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_ingestion.py for tasks to queue
+[2024-11-25T17:25:47.742+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:25:47.741+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/data_ingestion.py
+[2024-11-25T17:25:47.812+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:25:47.811+0000] {graph.py:470} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__nyc_green_taxi__transform...
+[2024-11-25T17:25:51.477+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:25:51.477+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__nyc_green_taxi__transform for current version: 3.6373244870000008
+[2024-11-25T17:25:51.478+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:25:51.478+0000] {graph.py:497} INFO - Cosmos performance: Cache miss for cosmos_cache__nyc_green_taxi__transform - skipped
+[2024-11-25T17:25:51.479+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:25:51.479+0000] {graph.py:528} INFO - Trying to parse the dbt project in `/opt/airflow/include/dbt` using dbt ls...
+[2024-11-25T17:25:51.497+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:25:51.496+0000] {graph.py:547} INFO - Partial parse is enabled and the latest partial parse file is /opt/airflow/include/dbt/target/partial_parse.msgpack
+[2024-11-25T17:25:51.582+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:25:51.581+0000] {config.py:332} INFO - Using user-supplied profiles.yml at /opt/airflow/include/dbt/profiles.yml
+[2024-11-25T17:25:51.606+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:25:51.605+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmp0zaz1d6t --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev`
+[2024-11-25T17:26:01.579+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:26:01.578+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt ls --output json --project-dir /tmp/tmp0zaz1d6t --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev --select path:models/transform`
+[2024-11-25T17:26:16.918+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:26:16.917+0000] {timeout.py:68} ERROR - Process timed out, PID: 517
+[2024-11-25T17:26:47.635+0000] {processor.py:161} INFO - Started process (PID=607) to work on /opt/airflow/dags/data_ingestion.py
+[2024-11-25T17:26:47.637+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_ingestion.py for tasks to queue
+[2024-11-25T17:26:47.641+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:26:47.640+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/data_ingestion.py
+[2024-11-25T17:26:47.726+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:26:47.725+0000] {graph.py:470} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__nyc_green_taxi__transform...
+[2024-11-25T17:26:51.879+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:26:51.879+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__nyc_green_taxi__transform for current version: 4.122497278000083
+[2024-11-25T17:26:51.880+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:26:51.880+0000] {graph.py:497} INFO - Cosmos performance: Cache miss for cosmos_cache__nyc_green_taxi__transform - skipped
+[2024-11-25T17:26:51.882+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:26:51.881+0000] {graph.py:528} INFO - Trying to parse the dbt project in `/opt/airflow/include/dbt` using dbt ls...
+[2024-11-25T17:26:51.905+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:26:51.905+0000] {graph.py:547} INFO - Partial parse is enabled and the latest partial parse file is /opt/airflow/include/dbt/target/partial_parse.msgpack
+[2024-11-25T17:26:52.006+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:26:52.005+0000] {config.py:332} INFO - Using user-supplied profiles.yml at /opt/airflow/include/dbt/profiles.yml
+[2024-11-25T17:26:52.033+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:26:52.033+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmpz8mnz24f --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev`
+[2024-11-25T17:27:02.204+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:27:02.202+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt ls --output json --project-dir /tmp/tmpz8mnz24f --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev --select path:models/transform`
+[2024-11-25T17:27:16.737+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:27:16.736+0000] {timeout.py:68} ERROR - Process timed out, PID: 607
+[2024-11-25T17:27:47.542+0000] {processor.py:161} INFO - Started process (PID=696) to work on /opt/airflow/dags/data_ingestion.py
+[2024-11-25T17:27:47.544+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_ingestion.py for tasks to queue
+[2024-11-25T17:27:47.549+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:27:47.548+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/data_ingestion.py
+[2024-11-25T17:27:47.627+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:27:47.626+0000] {graph.py:470} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__nyc_green_taxi__transform...
+[2024-11-25T17:27:50.676+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:27:50.676+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__nyc_green_taxi__transform for current version: 4.025165012999992
+[2024-11-25T17:27:50.677+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:27:50.677+0000] {graph.py:497} INFO - Cosmos performance: Cache miss for cosmos_cache__nyc_green_taxi__transform - skipped
+[2024-11-25T17:27:50.678+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:27:50.678+0000] {graph.py:528} INFO - Trying to parse the dbt project in `/opt/airflow/include/dbt` using dbt ls...
+[2024-11-25T17:27:50.697+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:27:50.696+0000] {graph.py:547} INFO - Partial parse is enabled and the latest partial parse file is /opt/airflow/include/dbt/target/partial_parse.msgpack
+[2024-11-25T17:27:50.791+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:27:50.791+0000] {config.py:332} INFO - Using user-supplied profiles.yml at /opt/airflow/include/dbt/profiles.yml
+[2024-11-25T17:27:50.814+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:27:50.814+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmp44kgo9h9 --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev`
+[2024-11-25T17:28:00.708+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:28:00.707+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt ls --output json --project-dir /tmp/tmp44kgo9h9 --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev --select path:models/transform`
+[2024-11-25T17:28:16.094+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:28:16.093+0000] {timeout.py:68} ERROR - Process timed out, PID: 696
+[2024-11-25T17:28:47.004+0000] {processor.py:161} INFO - Started process (PID=786) to work on /opt/airflow/dags/data_ingestion.py
+[2024-11-25T17:28:47.006+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_ingestion.py for tasks to queue
+[2024-11-25T17:28:47.009+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:28:47.009+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/data_ingestion.py
+[2024-11-25T17:28:47.800+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:28:47.799+0000] {graph.py:470} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__nyc_green_taxi__transform...
+[2024-11-25T17:28:51.897+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:28:51.896+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__nyc_green_taxi__transform for current version: 4.07046462400001
+[2024-11-25T17:28:51.902+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:28:51.901+0000] {graph.py:497} INFO - Cosmos performance: Cache miss for cosmos_cache__nyc_green_taxi__transform - skipped
+[2024-11-25T17:28:51.906+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:28:51.905+0000] {graph.py:528} INFO - Trying to parse the dbt project in `/opt/airflow/include/dbt` using dbt ls...
+[2024-11-25T17:28:51.935+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:28:51.934+0000] {graph.py:547} INFO - Partial parse is enabled and the latest partial parse file is /opt/airflow/include/dbt/target/partial_parse.msgpack
+[2024-11-25T17:28:52.112+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:28:52.112+0000] {config.py:332} INFO - Using user-supplied profiles.yml at /opt/airflow/include/dbt/profiles.yml
+[2024-11-25T17:28:52.137+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:28:52.136+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmpeqsuw5t2 --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev`
+[2024-11-25T17:29:06.324+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:29:06.322+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt ls --output json --project-dir /tmp/tmpeqsuw5t2 --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev --select path:models/transform`
+[2024-11-25T17:29:16.321+0000] {logging_mixin.py:188} INFO - [2024-11-25T17:29:16.320+0000] {timeout.py:68} ERROR - Process timed out, PID: 786
+[2024-11-25T18:23:36.528+0000] {processor.py:161} INFO - Started process (PID=91) to work on /opt/airflow/dags/data_ingestion.py
+[2024-11-25T18:23:36.529+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_ingestion.py for tasks to queue
+[2024-11-25T18:23:36.530+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:23:36.530+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/data_ingestion.py
+[2024-11-25T18:23:36.560+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:23:36.560+0000] {graph.py:470} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__nyc_green_taxi__transform...
+[2024-11-25T18:23:36.574+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:23:36.573+0000] {graph.py:476} INFO - Cosmos performance: Cache miss for cosmos_cache__nyc_green_taxi__transform
+[2024-11-25T18:23:36.574+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:23:36.574+0000] {graph.py:528} INFO - Trying to parse the dbt project in `/opt/airflow/include/dbt` using dbt ls...
+[2024-11-25T18:23:36.579+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:23:36.578+0000] {graph.py:547} INFO - Partial parse is enabled and the latest partial parse file is /opt/airflow/include/dbt/target/partial_parse.msgpack
+[2024-11-25T18:23:36.606+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:23:36.605+0000] {config.py:332} INFO - Using user-supplied profiles.yml at /opt/airflow/include/dbt/profiles.yml
+[2024-11-25T18:23:36.611+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:23:36.611+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmpkqce8dgg --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev`
+[2024-11-25T18:23:42.233+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:23:42.232+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt ls --output json --project-dir /tmp/tmpkqce8dgg --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev --select path:models/transform`
+[2024-11-25T18:23:50.969+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:23:50.966+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/data_ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_ingestion.py", line 215, in <module>
+    transform_dbt_task = DbtTaskGroup(
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/airflow/task_group.py", line 28, in __init__
+    DbtToAirflowConverter.__init__(self, *args, **specific_kwargs(**kwargs))
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/converter.py", line 260, in __init__
+    self.dbt_graph.load(method=render_config.load_method, execution_mode=execution_config.execution_mode)
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 408, in load
+    load_method[method]()
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 461, in load_via_dbt_ls
+    self.load_via_dbt_ls_without_cache()
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 580, in load_via_dbt_ls_without_cache
+    nodes = self.run_dbt_ls(dbt_cmd, self.project_path, tmpdir_path, env)
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 442, in run_dbt_ls
+    stdout = run_command(ls_command, tmp_dir, env_vars)
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 156, in run_command
+    raise CosmosLoadDbtException(f"Unable to run {command} due to the error:\n{details}")
+cosmos.dbt.graph.CosmosLoadDbtException: Unable to run ['/home/airflow/.local/bin/dbt', 'ls', '--output', 'json', '--project-dir', '/tmp/tmpkqce8dgg', '--profiles-dir', '/opt/airflow/include/dbt', '--profile', 'nyc_taxi', '--target', 'dev', '--select', 'path:models/transform'] due to the error:
+18:23:44  Running with dbt=1.8.7
+18:23:46  Registered adapter: bigquery=1.8.3
+18:23:46  Unable to do partial parsing because of a version mismatch
+18:23:48  [WARNING]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+18:23:49  Encountered an error:
+Compilation Error
+  Model 'model.nyc_taxi.fct_trips' (models/transform/fct_trips.sql) depends on a source named 'nyc_taxi.dim_time' which was not found
+[2024-11-25T18:23:50.970+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data_ingestion.py
+[2024-11-25T18:23:50.980+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data_ingestion.py took 14.460 seconds
+[2024-11-25T18:24:21.837+0000] {processor.py:161} INFO - Started process (PID=180) to work on /opt/airflow/dags/data_ingestion.py
+[2024-11-25T18:24:21.837+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_ingestion.py for tasks to queue
+[2024-11-25T18:24:21.839+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:24:21.838+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/data_ingestion.py
+[2024-11-25T18:24:21.862+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:24:21.861+0000] {graph.py:470} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__nyc_green_taxi__transform...
+[2024-11-25T18:24:21.871+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:24:21.871+0000] {graph.py:476} INFO - Cosmos performance: Cache miss for cosmos_cache__nyc_green_taxi__transform
+[2024-11-25T18:24:21.872+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:24:21.872+0000] {graph.py:528} INFO - Trying to parse the dbt project in `/opt/airflow/include/dbt` using dbt ls...
+[2024-11-25T18:24:21.876+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:24:21.875+0000] {graph.py:547} INFO - Partial parse is enabled and the latest partial parse file is /opt/airflow/include/dbt/target/partial_parse.msgpack
+[2024-11-25T18:24:21.895+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:24:21.895+0000] {config.py:332} INFO - Using user-supplied profiles.yml at /opt/airflow/include/dbt/profiles.yml
+[2024-11-25T18:24:21.901+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:24:21.901+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmpvjsel2a9 --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev`
+[2024-11-25T18:24:25.636+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:24:25.635+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt ls --output json --project-dir /tmp/tmpvjsel2a9 --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev --select path:models/transform`
+[2024-11-25T18:24:33.976+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:24:33.972+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/data_ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_ingestion.py", line 215, in <module>
+    transform_dbt_task = DbtTaskGroup(
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/airflow/task_group.py", line 28, in __init__
+    DbtToAirflowConverter.__init__(self, *args, **specific_kwargs(**kwargs))
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/converter.py", line 260, in __init__
+    self.dbt_graph.load(method=render_config.load_method, execution_mode=execution_config.execution_mode)
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 408, in load
+    load_method[method]()
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 461, in load_via_dbt_ls
+    self.load_via_dbt_ls_without_cache()
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 580, in load_via_dbt_ls_without_cache
+    nodes = self.run_dbt_ls(dbt_cmd, self.project_path, tmpdir_path, env)
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 442, in run_dbt_ls
+    stdout = run_command(ls_command, tmp_dir, env_vars)
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 156, in run_command
+    raise CosmosLoadDbtException(f"Unable to run {command} due to the error:\n{details}")
+cosmos.dbt.graph.CosmosLoadDbtException: Unable to run ['/home/airflow/.local/bin/dbt', 'ls', '--output', 'json', '--project-dir', '/tmp/tmpvjsel2a9', '--profiles-dir', '/opt/airflow/include/dbt', '--profile', 'nyc_taxi', '--target', 'dev', '--select', 'path:models/transform'] due to the error:
+18:24:27  Running with dbt=1.8.7
+18:24:29  Registered adapter: bigquery=1.8.3
+18:24:29  Unable to do partial parsing because of a version mismatch
+18:24:31  [WARNING]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+18:24:31  Encountered an error:
+Compilation Error
+  Model 'model.nyc_taxi.fct_trips' (models/transform/fct_trips.sql) depends on a source named 'nyc_taxi.dim_time' which was not found
+[2024-11-25T18:24:33.977+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data_ingestion.py
+[2024-11-25T18:24:33.988+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data_ingestion.py took 13.119 seconds
+[2024-11-25T18:25:04.607+0000] {processor.py:161} INFO - Started process (PID=263) to work on /opt/airflow/dags/data_ingestion.py
+[2024-11-25T18:25:04.607+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_ingestion.py for tasks to queue
+[2024-11-25T18:25:04.609+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:25:04.609+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/data_ingestion.py
+[2024-11-25T18:25:04.632+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:25:04.632+0000] {graph.py:470} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__nyc_green_taxi__transform...
+[2024-11-25T18:25:04.642+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:25:04.642+0000] {graph.py:476} INFO - Cosmos performance: Cache miss for cosmos_cache__nyc_green_taxi__transform
+[2024-11-25T18:25:04.643+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:25:04.642+0000] {graph.py:528} INFO - Trying to parse the dbt project in `/opt/airflow/include/dbt` using dbt ls...
+[2024-11-25T18:25:04.646+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:25:04.646+0000] {graph.py:547} INFO - Partial parse is enabled and the latest partial parse file is /opt/airflow/include/dbt/target/partial_parse.msgpack
+[2024-11-25T18:25:04.664+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:25:04.664+0000] {config.py:332} INFO - Using user-supplied profiles.yml at /opt/airflow/include/dbt/profiles.yml
+[2024-11-25T18:25:04.671+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:25:04.670+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmp2ogagxkz --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev`
+[2024-11-25T18:25:10.167+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:25:10.167+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt ls --output json --project-dir /tmp/tmp2ogagxkz --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev --select path:models/transform`
+[2024-11-25T18:25:18.245+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:25:18.241+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/data_ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_ingestion.py", line 215, in <module>
+    transform_dbt_task = DbtTaskGroup(
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/airflow/task_group.py", line 28, in __init__
+    DbtToAirflowConverter.__init__(self, *args, **specific_kwargs(**kwargs))
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/converter.py", line 260, in __init__
+    self.dbt_graph.load(method=render_config.load_method, execution_mode=execution_config.execution_mode)
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 408, in load
+    load_method[method]()
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 461, in load_via_dbt_ls
+    self.load_via_dbt_ls_without_cache()
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 580, in load_via_dbt_ls_without_cache
+    nodes = self.run_dbt_ls(dbt_cmd, self.project_path, tmpdir_path, env)
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 442, in run_dbt_ls
+    stdout = run_command(ls_command, tmp_dir, env_vars)
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 156, in run_command
+    raise CosmosLoadDbtException(f"Unable to run {command} due to the error:\n{details}")
+cosmos.dbt.graph.CosmosLoadDbtException: Unable to run ['/home/airflow/.local/bin/dbt', 'ls', '--output', 'json', '--project-dir', '/tmp/tmp2ogagxkz', '--profiles-dir', '/opt/airflow/include/dbt', '--profile', 'nyc_taxi', '--target', 'dev', '--select', 'path:models/transform'] due to the error:
+18:25:12  Running with dbt=1.8.7
+18:25:14  Registered adapter: bigquery=1.8.3
+18:25:14  Unable to do partial parsing because of a version mismatch
+18:25:16  [WARNING]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+18:25:16  Encountered an error:
+Compilation Error
+  Model 'model.nyc_taxi.fct_trips' (models/transform/fct_trips.sql) depends on a source named 'nyc_taxi.dim_time' which was not found
+[2024-11-25T18:25:18.246+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data_ingestion.py
+[2024-11-25T18:25:18.261+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data_ingestion.py took 13.660 seconds
+[2024-11-25T18:25:48.702+0000] {processor.py:161} INFO - Started process (PID=352) to work on /opt/airflow/dags/data_ingestion.py
+[2024-11-25T18:25:48.702+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_ingestion.py for tasks to queue
+[2024-11-25T18:25:48.704+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:25:48.703+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/data_ingestion.py
+[2024-11-25T18:25:48.726+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:25:48.726+0000] {graph.py:470} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__nyc_green_taxi__transform...
+[2024-11-25T18:25:48.736+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:25:48.736+0000] {graph.py:476} INFO - Cosmos performance: Cache miss for cosmos_cache__nyc_green_taxi__transform
+[2024-11-25T18:25:48.736+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:25:48.736+0000] {graph.py:528} INFO - Trying to parse the dbt project in `/opt/airflow/include/dbt` using dbt ls...
+[2024-11-25T18:25:48.739+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:25:48.739+0000] {graph.py:547} INFO - Partial parse is enabled and the latest partial parse file is /opt/airflow/include/dbt/target/partial_parse.msgpack
+[2024-11-25T18:25:48.756+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:25:48.756+0000] {config.py:332} INFO - Using user-supplied profiles.yml at /opt/airflow/include/dbt/profiles.yml
+[2024-11-25T18:25:48.761+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:25:48.761+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmpunmmo_03 --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev`
+[2024-11-25T18:25:52.585+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:25:52.584+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt ls --output json --project-dir /tmp/tmpunmmo_03 --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev --select path:models/transform`
+[2024-11-25T18:26:00.921+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:26:00.916+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/data_ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_ingestion.py", line 215, in <module>
+    transform_dbt_task = DbtTaskGroup(
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/airflow/task_group.py", line 28, in __init__
+    DbtToAirflowConverter.__init__(self, *args, **specific_kwargs(**kwargs))
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/converter.py", line 260, in __init__
+    self.dbt_graph.load(method=render_config.load_method, execution_mode=execution_config.execution_mode)
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 408, in load
+    load_method[method]()
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 461, in load_via_dbt_ls
+    self.load_via_dbt_ls_without_cache()
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 580, in load_via_dbt_ls_without_cache
+    nodes = self.run_dbt_ls(dbt_cmd, self.project_path, tmpdir_path, env)
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 442, in run_dbt_ls
+    stdout = run_command(ls_command, tmp_dir, env_vars)
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 156, in run_command
+    raise CosmosLoadDbtException(f"Unable to run {command} due to the error:\n{details}")
+cosmos.dbt.graph.CosmosLoadDbtException: Unable to run ['/home/airflow/.local/bin/dbt', 'ls', '--output', 'json', '--project-dir', '/tmp/tmpunmmo_03', '--profiles-dir', '/opt/airflow/include/dbt', '--profile', 'nyc_taxi', '--target', 'dev', '--select', 'path:models/transform'] due to the error:
+18:25:54  Running with dbt=1.8.7
+18:25:56  Registered adapter: bigquery=1.8.3
+18:25:57  Unable to do partial parsing because of a version mismatch
+18:25:58  [WARNING]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+18:25:59  Encountered an error:
+Compilation Error
+  Model 'model.nyc_taxi.fct_trips' (models/transform/fct_trips.sql) depends on a source named 'nyc_taxi.dim_time' which was not found
+[2024-11-25T18:26:00.922+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data_ingestion.py
+[2024-11-25T18:26:00.940+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data_ingestion.py took 13.430 seconds
+[2024-11-25T18:26:31.108+0000] {processor.py:161} INFO - Started process (PID=435) to work on /opt/airflow/dags/data_ingestion.py
+[2024-11-25T18:26:31.108+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_ingestion.py for tasks to queue
+[2024-11-25T18:26:31.110+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:26:31.109+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/data_ingestion.py
+[2024-11-25T18:26:31.134+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:26:31.134+0000] {graph.py:470} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__nyc_green_taxi__transform...
+[2024-11-25T18:26:31.145+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:26:31.144+0000] {graph.py:476} INFO - Cosmos performance: Cache miss for cosmos_cache__nyc_green_taxi__transform
+[2024-11-25T18:26:31.145+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:26:31.145+0000] {graph.py:528} INFO - Trying to parse the dbt project in `/opt/airflow/include/dbt` using dbt ls...
+[2024-11-25T18:26:31.149+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:26:31.148+0000] {graph.py:547} INFO - Partial parse is enabled and the latest partial parse file is /opt/airflow/include/dbt/target/partial_parse.msgpack
+[2024-11-25T18:26:31.166+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:26:31.166+0000] {config.py:332} INFO - Using user-supplied profiles.yml at /opt/airflow/include/dbt/profiles.yml
+[2024-11-25T18:26:31.171+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:26:31.171+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmppdua0zlr --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev`
+[2024-11-25T18:26:36.758+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:26:36.757+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt ls --output json --project-dir /tmp/tmppdua0zlr --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev --select path:models/transform`
+[2024-11-25T18:26:45.549+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:26:45.545+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/data_ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_ingestion.py", line 215, in <module>
+    transform_dbt_task = DbtTaskGroup(
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/airflow/task_group.py", line 28, in __init__
+    DbtToAirflowConverter.__init__(self, *args, **specific_kwargs(**kwargs))
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/converter.py", line 260, in __init__
+    self.dbt_graph.load(method=render_config.load_method, execution_mode=execution_config.execution_mode)
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 408, in load
+    load_method[method]()
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 461, in load_via_dbt_ls
+    self.load_via_dbt_ls_without_cache()
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 580, in load_via_dbt_ls_without_cache
+    nodes = self.run_dbt_ls(dbt_cmd, self.project_path, tmpdir_path, env)
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 442, in run_dbt_ls
+    stdout = run_command(ls_command, tmp_dir, env_vars)
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 156, in run_command
+    raise CosmosLoadDbtException(f"Unable to run {command} due to the error:\n{details}")
+cosmos.dbt.graph.CosmosLoadDbtException: Unable to run ['/home/airflow/.local/bin/dbt', 'ls', '--output', 'json', '--project-dir', '/tmp/tmppdua0zlr', '--profiles-dir', '/opt/airflow/include/dbt', '--profile', 'nyc_taxi', '--target', 'dev', '--select', 'path:models/transform'] due to the error:
+18:26:39  Running with dbt=1.8.7
+18:26:40  Registered adapter: bigquery=1.8.3
+18:26:41  Unable to do partial parsing because of a version mismatch
+18:26:43  [WARNING]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+18:26:43  Encountered an error:
+Compilation Error
+  Model 'model.nyc_taxi.fct_trips' (models/transform/fct_trips.sql) depends on a source named 'nyc_taxi.dim_time' which was not found
+[2024-11-25T18:26:45.550+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data_ingestion.py
+[2024-11-25T18:26:45.560+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data_ingestion.py took 14.458 seconds
+[2024-11-25T18:27:16.561+0000] {processor.py:161} INFO - Started process (PID=524) to work on /opt/airflow/dags/data_ingestion.py
+[2024-11-25T18:27:16.562+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_ingestion.py for tasks to queue
+[2024-11-25T18:27:16.563+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:27:16.563+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/data_ingestion.py
+[2024-11-25T18:27:16.586+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:27:16.586+0000] {graph.py:470} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__nyc_green_taxi__transform...
+[2024-11-25T18:27:16.596+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:27:16.596+0000] {graph.py:476} INFO - Cosmos performance: Cache miss for cosmos_cache__nyc_green_taxi__transform
+[2024-11-25T18:27:16.596+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:27:16.596+0000] {graph.py:528} INFO - Trying to parse the dbt project in `/opt/airflow/include/dbt` using dbt ls...
+[2024-11-25T18:27:16.600+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:27:16.599+0000] {graph.py:547} INFO - Partial parse is enabled and the latest partial parse file is /opt/airflow/include/dbt/target/partial_parse.msgpack
+[2024-11-25T18:27:16.619+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:27:16.618+0000] {config.py:332} INFO - Using user-supplied profiles.yml at /opt/airflow/include/dbt/profiles.yml
+[2024-11-25T18:27:16.623+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:27:16.623+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmpd4s75spz --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev`
+[2024-11-25T18:27:21.719+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:27:21.719+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt ls --output json --project-dir /tmp/tmpd4s75spz --profiles-dir /opt/airflow/include/dbt --profile nyc_taxi --target dev --select path:models/transform`
+[2024-11-25T18:27:30.113+0000] {logging_mixin.py:188} INFO - [2024-11-25T18:27:30.109+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/data_ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/opt/airflow/dags/data_ingestion.py", line 215, in <module>
+    transform_dbt_task = DbtTaskGroup(
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/airflow/task_group.py", line 28, in __init__
+    DbtToAirflowConverter.__init__(self, *args, **specific_kwargs(**kwargs))
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/converter.py", line 260, in __init__
+    self.dbt_graph.load(method=render_config.load_method, execution_mode=execution_config.execution_mode)
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 408, in load
+    load_method[method]()
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 461, in load_via_dbt_ls
+    self.load_via_dbt_ls_without_cache()
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 580, in load_via_dbt_ls_without_cache
+    nodes = self.run_dbt_ls(dbt_cmd, self.project_path, tmpdir_path, env)
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 442, in run_dbt_ls
+    stdout = run_command(ls_command, tmp_dir, env_vars)
+  File "/home/airflow/.local/lib/python3.9/site-packages/cosmos/dbt/graph.py", line 156, in run_command
+    raise CosmosLoadDbtException(f"Unable to run {command} due to the error:\n{details}")
+cosmos.dbt.graph.CosmosLoadDbtException: Unable to run ['/home/airflow/.local/bin/dbt', 'ls', '--output', 'json', '--project-dir', '/tmp/tmpd4s75spz', '--profiles-dir', '/opt/airflow/include/dbt', '--profile', 'nyc_taxi', '--target', 'dev', '--select', 'path:models/transform'] due to the error:
+18:27:24  Running with dbt=1.8.7
+18:27:25  Registered adapter: bigquery=1.8.3
+18:27:26  Unable to do partial parsing because of a version mismatch
+18:27:28  [WARNING]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+18:27:28  Encountered an error:
+Compilation Error
+  Model 'model.nyc_taxi.fct_trips' (models/transform/fct_trips.sql) depends on a source named 'nyc_taxi.dim_time' which was not found
+[2024-11-25T18:27:30.114+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data_ingestion.py
+[2024-11-25T18:27:30.130+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data_ingestion.py took 13.574 seconds

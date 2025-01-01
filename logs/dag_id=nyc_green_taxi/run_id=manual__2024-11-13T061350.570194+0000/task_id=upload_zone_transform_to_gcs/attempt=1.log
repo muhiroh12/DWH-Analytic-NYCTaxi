@@ -1,0 +1,31 @@
+[2024-11-13T06:13:56.090+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-11-13T06:13:56.119+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nyc_green_taxi.upload_zone_transform_to_gcs manual__2024-11-13T06:13:50.570194+00:00 [queued]>
+[2024-11-13T06:13:56.136+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nyc_green_taxi.upload_zone_transform_to_gcs manual__2024-11-13T06:13:50.570194+00:00 [queued]>
+[2024-11-13T06:13:56.137+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-11-13T06:13:56.163+0000] {taskinstance.py:2330} INFO - Executing <Task(LocalFilesystemToGCSOperator): upload_zone_transform_to_gcs> on 2024-11-13 06:13:50.570194+00:00
+[2024-11-13T06:13:56.175+0000] {standard_task_runner.py:64} INFO - Started process 616 to run task
+[2024-11-13T06:13:56.180+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'nyc_green_taxi', 'upload_zone_transform_to_gcs', 'manual__2024-11-13T06:13:50.570194+00:00', '--job-id', '66', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion.py', '--cfg-path', '/tmp/tmp3taxb3bn']
+[2024-11-13T06:13:56.186+0000] {standard_task_runner.py:91} INFO - Job 66: Subtask upload_zone_transform_to_gcs
+[2024-11-13T06:13:56.273+0000] {task_command.py:426} INFO - Running <TaskInstance: nyc_green_taxi.upload_zone_transform_to_gcs manual__2024-11-13T06:13:50.570194+00:00 [running]> on host 7a2cfb7b2df5
+[2024-11-13T06:13:56.449+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='nyc_green_taxi' AIRFLOW_CTX_TASK_ID='upload_zone_transform_to_gcs' AIRFLOW_CTX_EXECUTION_DATE='2024-11-13T06:13:50.570194+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-13T06:13:50.570194+00:00'
+[2024-11-13T06:13:56.451+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-11-13T06:13:56.478+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2024-11-13T06:13:56.479+0000] {connection.py:274} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2024-11-13T06:13:56.482+0000] {base.py:84} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2024-11-13T06:13:56.483+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-11-13T06:13:56.485+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/google/cloud/transfers/local_to_gcs.py", line 101, in execute
+    raise FileNotFoundError(self.src)
+FileNotFoundError: /opt/***/dataset/transform/taxi_zone_lookup.csv
+[2024-11-13T06:13:56.504+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=nyc_green_taxi, task_id=upload_zone_transform_to_gcs, run_id=manual__2024-11-13T06:13:50.570194+00:00, execution_date=20241113T061350, start_date=20241113T061356, end_date=20241113T061356
+[2024-11-13T06:13:56.529+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 66 for task upload_zone_transform_to_gcs (/opt/***/dataset/transform/taxi_zone_lookup.csv; 616)
+[2024-11-13T06:13:56.555+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2024-11-13T06:13:56.585+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-13T06:13:56.588+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

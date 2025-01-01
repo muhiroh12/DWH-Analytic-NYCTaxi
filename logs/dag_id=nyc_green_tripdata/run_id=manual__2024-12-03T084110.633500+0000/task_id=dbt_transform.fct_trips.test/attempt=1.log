@@ -1,0 +1,66 @@
+[2024-12-03T08:42:54.048+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-12-03T08:42:54.066+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nyc_green_tripdata.dbt_transform.fct_trips.test manual__2024-12-03T08:41:10.633500+00:00 [queued]>
+[2024-12-03T08:42:54.076+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nyc_green_tripdata.dbt_transform.fct_trips.test manual__2024-12-03T08:41:10.633500+00:00 [queued]>
+[2024-12-03T08:42:54.077+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-12-03T08:42:54.089+0000] {taskinstance.py:2330} INFO - Executing <Task(DbtTestLocalOperator): dbt_transform.fct_trips.test> on 2024-12-03 08:41:10.633500+00:00
+[2024-12-03T08:42:54.100+0000] {standard_task_runner.py:64} INFO - Started process 7101 to run task
+[2024-12-03T08:42:54.103+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'nyc_green_tripdata', 'dbt_transform.fct_trips.test', 'manual__2024-12-03T08:41:10.633500+00:00', '--job-id', '328', '--raw', '--subdir', 'DAGS_FOLDER/dag_green_tripdata.py', '--cfg-path', '/tmp/tmpphsdr_79']
+[2024-12-03T08:42:54.105+0000] {standard_task_runner.py:91} INFO - Job 328: Subtask dbt_transform.fct_trips.test
+[2024-12-03T08:42:54.148+0000] {task_command.py:426} INFO - Running <TaskInstance: nyc_green_tripdata.dbt_transform.fct_trips.test manual__2024-12-03T08:41:10.633500+00:00 [running]> on host 39c047f38cb8
+[2024-12-03T08:42:54.232+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='nyc_green_tripdata' AIRFLOW_CTX_TASK_ID='dbt_transform.fct_trips.test' AIRFLOW_CTX_EXECUTION_DATE='2024-12-03T08:41:10.633500+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-03T08:41:10.633500+00:00'
+[2024-12-03T08:42:54.234+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-12-03T08:42:55.735+0000] {local.py:216} INFO - dbtRunner is available. Using dbtRunner for invoking dbt.
+[2024-12-03T08:42:55.736+0000] {local.py:432} INFO - Cloning project to writable temp directory /tmp/tmpm3xk1m_d from /opt/airflow/include/dbt
+[2024-12-03T08:42:55.740+0000] {local.py:443} INFO - Partial parse is enabled and the latest partial parse file is /tmp/cosmos/nyc_green_tripdata__dbt_transform/target/partial_parse.msgpack
+[2024-12-03T08:42:55.747+0000] {config.py:332} INFO - Using user-supplied profiles.yml at /opt/airflow/include/dbt/profiles.yml
+[2024-12-03T08:42:55.747+0000] {local.py:404} INFO - Trying to run dbtRunner with:
+ ['test', '--models', 'fct_trips', '--project-dir', '/tmp/tmpm3xk1m_d', '--profiles-dir', '/opt/***/include/dbt', '--profile', 'nyc_taxi', '--target', 'dev']
+ in /tmp/tmpm3xk1m_d
+[2024-12-03T08:42:55.825+0000] {logging_mixin.py:188} INFO - 08:42:55  Running with dbt=1.8.7
+[2024-12-03T08:42:56.333+0000] {logging_mixin.py:188} INFO - 08:42:56  Registered adapter: bigquery=1.8.3
+[2024-12-03T08:42:57.948+0000] {logging_mixin.py:188} INFO - 08:42:57  Found 7 models, 34 data tests, 2 sources, 600 macros
+[2024-12-03T08:42:57.953+0000] {logging_mixin.py:188} INFO - 08:42:57
+[2024-12-03T08:42:58.560+0000] {logging_mixin.py:188} INFO - 08:42:58  Concurrency: 1 threads (target='dev')
+[2024-12-03T08:42:58.561+0000] {logging_mixin.py:188} INFO - 08:42:58
+[2024-12-03T08:42:58.565+0000] {logging_mixin.py:188} INFO - 08:42:58  1 of 12 START test not_null_fct_trips_do_location_id ........................... [RUN]
+[2024-12-03T08:43:00.534+0000] {logging_mixin.py:188} INFO - 08:43:00  1 of 12 PASS not_null_fct_trips_do_location_id ................................. [PASS in 1.97s]
+[2024-12-03T08:43:00.538+0000] {logging_mixin.py:188} INFO - 08:43:00  2 of 12 START test not_null_fct_trips_dropoff_time_id .......................... [RUN]
+[2024-12-03T08:43:00.111+0000] {logging_mixin.py:188} INFO - 08:43:00  2 of 12 PASS not_null_fct_trips_dropoff_time_id ................................ [PASS in -0.43s]
+[2024-12-03T08:43:00.115+0000] {logging_mixin.py:188} INFO - 08:43:00  3 of 12 START test not_null_fct_trips_extra .................................... [RUN]
+[2024-12-03T08:43:02.051+0000] {logging_mixin.py:188} INFO - 08:43:02  3 of 12 PASS not_null_fct_trips_extra .......................................... [PASS in 1.93s]
+[2024-12-03T08:43:02.055+0000] {logging_mixin.py:188} INFO - 08:43:02  4 of 12 START test not_null_fct_trips_improvement_surcharge .................... [RUN]
+[2024-12-03T08:43:03.932+0000] {logging_mixin.py:188} INFO - 08:43:03  4 of 12 PASS not_null_fct_trips_improvement_surcharge .......................... [PASS in 1.88s]
+[2024-12-03T08:43:03.936+0000] {logging_mixin.py:188} INFO - 08:43:03  5 of 12 START test not_null_fct_trips_passenger_count .......................... [RUN]
+[2024-12-03T08:43:05.862+0000] {logging_mixin.py:188} INFO - 08:43:05  5 of 12 PASS not_null_fct_trips_passenger_count ................................ [PASS in 1.92s]
+[2024-12-03T08:43:05.878+0000] {logging_mixin.py:188} INFO - 08:43:05  6 of 12 START test not_null_fct_trips_payment_type ............................. [RUN]
+[2024-12-03T08:43:07.842+0000] {logging_mixin.py:188} INFO - 08:43:07  6 of 12 PASS not_null_fct_trips_payment_type ................................... [PASS in 1.96s]
+[2024-12-03T08:43:07.847+0000] {logging_mixin.py:188} INFO - 08:43:07  7 of 12 START test not_null_fct_trips_pickup_time_id ........................... [RUN]
+[2024-12-03T08:43:09.998+0000] {logging_mixin.py:188} INFO - 08:43:09  7 of 12 PASS not_null_fct_trips_pickup_time_id ................................. [PASS in 2.15s]
+[2024-12-03T08:43:10.002+0000] {logging_mixin.py:188} INFO - 08:43:10  8 of 12 START test not_null_fct_trips_pu_location_id ........................... [RUN]
+[2024-12-03T08:43:12.166+0000] {logging_mixin.py:188} INFO - 08:43:12  8 of 12 PASS not_null_fct_trips_pu_location_id ................................. [PASS in 2.16s]
+[2024-12-03T08:43:12.170+0000] {logging_mixin.py:188} INFO - 08:43:12  9 of 12 START test not_null_fct_trips_rate_code_id ............................. [RUN]
+[2024-12-03T08:43:14.116+0000] {logging_mixin.py:188} INFO - 08:43:14  9 of 12 PASS not_null_fct_trips_rate_code_id ................................... [PASS in 1.94s]
+[2024-12-03T08:43:14.120+0000] {logging_mixin.py:188} INFO - 08:43:14  10 of 12 START test not_null_fct_trips_trip_distance ........................... [RUN]
+[2024-12-03T08:43:16.249+0000] {logging_mixin.py:188} INFO - 08:43:16  10 of 12 PASS not_null_fct_trips_trip_distance ................................. [PASS in 2.13s]
+[2024-12-03T08:43:16.260+0000] {logging_mixin.py:188} INFO - 08:43:16  11 of 12 START test not_null_fct_trips_vendor_id ............................... [RUN]
+[2024-12-03T08:43:18.241+0000] {logging_mixin.py:188} INFO - 08:43:18  11 of 12 PASS not_null_fct_trips_vendor_id ..................................... [PASS in 1.98s]
+[2024-12-03T08:43:18.245+0000] {logging_mixin.py:188} INFO - 08:43:18  12 of 12 START test unique_fct_trips_trip_id ................................... [RUN]
+[2024-12-03T08:43:21.063+0000] {logging_mixin.py:188} INFO - 08:43:21  12 of 12 PASS unique_fct_trips_trip_id ......................................... [PASS in 2.82s]
+[2024-12-03T08:43:21.069+0000] {logging_mixin.py:188} INFO - 08:43:21
+[2024-12-03T08:43:21.070+0000] {logging_mixin.py:188} INFO - 08:43:21  Finished running 12 data tests in 0 hours 0 minutes and 23.11 seconds (23.11s).
+[2024-12-03T08:43:21.144+0000] {logging_mixin.py:188} INFO - 08:43:21
+[2024-12-03T08:43:21.145+0000] {logging_mixin.py:188} INFO - 08:43:21  Completed successfully
+[2024-12-03T08:43:21.146+0000] {logging_mixin.py:188} INFO - 08:43:21
+[2024-12-03T08:43:21.147+0000] {logging_mixin.py:188} INFO - 08:43:21  Done. PASS=12 WARN=0 ERROR=0 SKIP=0 TOTAL=12
+[2024-12-03T08:43:22.399+0000] {local.py:196} WARNING - Artifact schema version: https://schemas.getdbt.com/dbt/manifest/v12.json is above dbt-ol supported version 7. This might cause errors.
+[2024-12-03T08:43:22.400+0000] {local.py:196} WARNING - Artifact schema version: https://schemas.getdbt.com/dbt/run-results/v6.json is above dbt-ol supported version 5. This might cause errors.
+[2024-12-03T08:43:22.405+0000] {local.py:490} INFO - Inlets: [Dataset(uri='bigquery/northern-shield-437204-m0.nyc_taxi.fct_trips', extra=None)]
+[2024-12-03T08:43:22.406+0000] {local.py:491} INFO - Outlets: []
+[2024-12-03T08:43:22.406+0000] {local.py:590} INFO - Assigning inlets/outlets without DatasetAlias
+[2024-12-03T08:43:22.406+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-12-03T08:43:22.428+0000] {dag.py:3947} INFO - Setting next_dagrun for nyc_green_tripdata to None, run_after=None
+[2024-12-03T08:43:22.459+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-12-03T08:43:22.480+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=nyc_green_tripdata, task_id=dbt_transform.fct_trips.test, run_id=manual__2024-12-03T08:41:10.633500+00:00, execution_date=20241203T084110, start_date=20241203T084254, end_date=20241203T084322
+[2024-12-03T08:43:22.519+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-12-03T08:43:22.538+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-03T08:43:22.540+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

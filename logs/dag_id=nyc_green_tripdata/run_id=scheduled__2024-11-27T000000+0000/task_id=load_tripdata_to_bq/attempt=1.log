@@ -1,0 +1,22 @@
+[2024-11-28T06:54:56.189+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-11-28T06:54:56.223+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nyc_green_tripdata.load_tripdata_to_bq scheduled__2024-11-27T00:00:00+00:00 [queued]>
+[2024-11-28T06:54:56.240+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nyc_green_tripdata.load_tripdata_to_bq scheduled__2024-11-27T00:00:00+00:00 [queued]>
+[2024-11-28T06:54:56.242+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-11-28T06:54:56.273+0000] {taskinstance.py:2330} INFO - Executing <Task(GCSToBigQueryOperator): load_tripdata_to_bq> on 2024-11-27 00:00:00+00:00
+[2024-11-28T06:54:56.286+0000] {standard_task_runner.py:64} INFO - Started process 752 to run task
+[2024-11-28T06:54:56.291+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'nyc_green_tripdata', 'load_tripdata_to_bq', 'scheduled__2024-11-27T00:00:00+00:00', '--job-id', '87', '--raw', '--subdir', 'DAGS_FOLDER/dag_green_tripdata.py', '--cfg-path', '/tmp/tmp9n1g6rt_']
+[2024-11-28T06:54:56.295+0000] {standard_task_runner.py:91} INFO - Job 87: Subtask load_tripdata_to_bq
+[2024-11-28T06:54:56.377+0000] {task_command.py:426} INFO - Running <TaskInstance: nyc_green_tripdata.load_tripdata_to_bq scheduled__2024-11-27T00:00:00+00:00 [running]> on host 39c047f38cb8
+[2024-11-28T06:54:56.541+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='nyc_green_tripdata' AIRFLOW_CTX_TASK_ID='load_tripdata_to_bq' AIRFLOW_CTX_EXECUTION_DATE='2024-11-27T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-11-27T00:00:00+00:00'
+[2024-11-28T06:54:56.545+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-11-28T06:54:56.548+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2024-11-28T06:54:56.549+0000] {connection.py:274} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2024-11-28T06:54:56.552+0000] {base.py:84} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2024-11-28T06:54:56.554+0000] {gcs_to_bigquery.py:381} INFO - Using existing BigQuery table for storing data...
+[2024-11-28T06:54:56.636+0000] {gcs_to_bigquery.py:385} INFO - Executing: {'load': {'autodetect': True, 'createDisposition': 'CREATE_IF_NEEDED', 'destinationTable': {'projectId': 'northern-shield-437204-m0', 'datasetId': 'nyc_taxi', 'tableId': 'green_tripdata'}, 'sourceFormat': 'PARQUET', 'sourceUris': ['gs://green_taxi_bucket/transform/tf_green_tripdata_2023-01.parquet'], 'writeDisposition': 'WRITE_APPEND', 'ignoreUnknownValues': False}}
+[2024-11-28T06:54:56.640+0000] {bigquery.py:1702} INFO - Inserting job ***_nyc_green_tripdata_load_tripdata_to_bq_2024_11_27T00_00_00_00_00_22710cb3951b5d197b39b1b3f4ac3960
+[2024-11-28T06:55:01.822+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-11-28T06:55:01.848+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=nyc_green_tripdata, task_id=load_tripdata_to_bq, run_id=scheduled__2024-11-27T00:00:00+00:00, execution_date=20241127T000000, start_date=20241128T065456, end_date=20241128T065501
+[2024-11-28T06:55:01.910+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-11-28T06:55:02.016+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-11-28T06:55:02.021+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

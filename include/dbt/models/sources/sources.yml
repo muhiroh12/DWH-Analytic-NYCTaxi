@@ -1,0 +1,11 @@
+
+# sources.yml
+version: 2
+
+sources:
+  - name: nyc_taxi
+    database: northern-shield-437204-m0
+
+    tables:
+      - name: green_tripdata
+      - name: zone_map

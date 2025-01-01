@@ -1,0 +1,45 @@
+checks for green_tripdata:
+  - schema:
+      fail:
+        when required column missing: 
+          - vendor_id
+          - lpep_pickup_datetime
+          - lpep_dropoff_datetime
+          - store_and_fwd_flag
+          - rate_code_id
+          - pu_location_id
+          - do_location_id
+          - passenger_count
+          - trip_distance
+          - fare_amount
+          - extra
+          - mta_tax
+          - tip_amount
+          - tolls_amount
+          - ehail_fee
+          - improvement_surcharge
+          - total_amount
+          - payment_type
+          - trip_type
+          - congestion_surcharge
+        when wrong column type:
+          vendor_id: INT64
+          lpep_pickup_datetime: TIMESTAMP
+          lpep_dropoff_datetime: TIMESTAMP
+          store_and_fwd_flag: STRING
+          rate_code_id: INT64
+          pu_location_id: INT64
+          do_location_id: INT64
+          passenger_count: INT64
+          trip_distance: FLOAT64
+          fare_amount: FLOAT64
+          extra: FLOAT64
+          mta_tax: FLOAT64
+          tip_amount: FLOAT64
+          tolls_amount: FLOAT64
+          ehail_fee: INT64
+          improvement_surcharge: FLOAT64
+          total_amount: FLOAT64
+          payment_type: INT64
+          trip_type: INT64
+          congestion_surcharge: FLOAT64

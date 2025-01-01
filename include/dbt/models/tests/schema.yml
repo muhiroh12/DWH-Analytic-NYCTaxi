@@ -1,0 +1,182 @@
+version: 2
+
+models:
+  - name: dim_zone
+    description: "Zone lookup Table"
+    columns:
+      - name: location_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+      - name: borough
+        description: "Full date of pickup"
+        tests:
+          - not_null
+      - name: zone
+        description: "Year of pickup"
+        tests:
+          - not_null
+      - name: service_zone
+        description: "Month of pickup"
+        tests:
+          - not_null
+
+  - name: dim_payment
+    description: "Payment type Table"
+    columns:
+      - name: type_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: payment_name
+        description: "payment name"
+        tests:
+          - accepted_values:
+              values: ["Credit card", "Cash", "No charge", "Dispute", "Unknown", "Voided trip"]
+
+  - name: dim_ratecode
+    description: "Rate code Table"
+    columns:
+      - name: rate_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+      - name: rate_code_name
+        description: "rate code name"
+        tests:
+          - accepted_values:
+              values: ["Standard rate", "JFK", "Newark", "Nassau or Westchester", "Negotiated fare", "Group ride", "Unknown"]
+
+  - name: dim_time
+    description: "Datetime Table"
+    columns:
+      - name: time_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+      - name: date
+        description: "date"
+        tests:
+          - not_null
+      - name: date_part
+        description: "datetime"
+        tests:
+          - not_null
+      - name: year
+        description: "year"
+        tests:
+          - not_null
+      - name: month
+        description: "month"
+        tests:
+          - not_null
+      - name: day
+        description: "day"
+        tests:
+          - not_null
+      - name: hour
+        description: "hour"
+        tests:
+          - not_null
+      - name: minute
+        description: "minute"
+        tests:
+          - not_null
+      - name: weekday
+        description: "weekday"
+        tests:
+          - accepted_values:
+              values: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+  - name: dim_triptype
+    description: "Trip type Table"
+    columns:
+      - name: type_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+      - name: trip_name
+        description: "trip name"
+        tests:
+          - accepted_values:
+              values: ["Street-hail", "Dispatch", "Unknown"]
+
+  - name: dim_vendor
+    description: "Vendor Table"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+      - name: vendor_name
+        description: "vendor name"
+        tests:
+          - accepted_values:
+              values: ["Creative Mobile Technologies", "VeriFone Inc."]
+      
+  - name: fct_trips
+    description: "Fact Table of tripdata"
+    columns:
+      - name: trip_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+      - name: vendor_id
+        description: "A code indicating the TPEP provider that provided the record"
+        tests:
+          - not_null
+      - name: pickup_time_id
+        description: "pickup time"
+        tests:
+          - not_null
+      - name: dropoff_time_id
+        description: "dropoff time"
+        tests:
+          - not_null
+      - name: rate_code_id
+        description: "The final rate code in effect at the end of the trip"
+        tests:
+          - not_null
+      - name: pu_location_id
+        description: "The pickup location"
+        tests:
+          - not_null
+      - name: do_location_id
+        description: "The droppof location"
+        tests:
+          - not_null
+      - name: passenger_count
+        description: "Customer count"
+        tests:
+          - not_null
+      - name: trip_distance
+        description: "trip distance"
+        tests:
+          - not_null
+      - name: fare_amount
+        description: "The time-and-distance fare calculated by the meter."
+      - name: extra
+        description: "Miscellaneous extras and surcharges. Currently, this only includes. the $0.50 and $1 rush hour and overnight charges"
+        tests:
+          - not_null
+      - name: mta_tax
+        description: "0.50 MTA tax that is automatically triggered based on the metered rate in use"
+      - name: tip_amount
+        description: "Tip amount  This field is automatically populated for credit card tips.Cash tips are not included"
+      - name: tolls_amount
+        description: "Total amount of all tolls paid in trip"
+      - name: improvement_surcharge
+        description: "0.30 improvement surcharge assessed trips at the flag drop. the improvement surcharge began being levied in 2015"
+        tests:
+          - not_null
+      - name: total_amount
+        description: "The total amount charged to passengers. Does not include cash tips."
+      - name: payment_type
+        description: "A numeric code signifying how the passenger paid for the trip"
+        tests:
+          - not_null
+      - name: trip_type
+        description: "Year of pickup"
+      - name: congestion_surcharge
+        description: "An additional charge for trips taken during high traffic congestion times"

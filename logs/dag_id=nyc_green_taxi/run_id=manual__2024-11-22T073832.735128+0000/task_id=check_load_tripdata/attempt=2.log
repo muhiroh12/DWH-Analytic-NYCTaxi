@@ -1,0 +1,71 @@
+[2024-11-22T07:43:51.893+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-11-22T07:43:51.907+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nyc_green_taxi.check_load_tripdata manual__2024-11-22T07:38:32.735128+00:00 [queued]>
+[2024-11-22T07:43:51.915+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nyc_green_taxi.check_load_tripdata manual__2024-11-22T07:38:32.735128+00:00 [queued]>
+[2024-11-22T07:43:51.915+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2024-11-22T07:43:51.926+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): check_load_tripdata> on 2024-11-22 07:38:32.735128+00:00
+[2024-11-22T07:43:51.934+0000] {standard_task_runner.py:64} INFO - Started process 2031 to run task
+[2024-11-22T07:43:51.937+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'nyc_green_taxi', 'check_load_tripdata', 'manual__2024-11-22T07:38:32.735128+00:00', '--job-id', '90', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion.py', '--cfg-path', '/tmp/tmpias8mus2']
+[2024-11-22T07:43:51.939+0000] {standard_task_runner.py:91} INFO - Job 90: Subtask check_load_tripdata
+[2024-11-22T07:43:51.980+0000] {task_command.py:426} INFO - Running <TaskInstance: nyc_green_taxi.check_load_tripdata manual__2024-11-22T07:38:32.735128+00:00 [running]> on host d0677a8ff53e
+[2024-11-22T07:43:52.047+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='muhii.smta@gmail.com' AIRFLOW_CTX_DAG_OWNER='Muhii' AIRFLOW_CTX_DAG_ID='nyc_green_taxi' AIRFLOW_CTX_TASK_ID='check_load_tripdata' AIRFLOW_CTX_EXECUTION_DATE='2024-11-22T07:38:32.735128+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-22T07:38:32.735128+00:00'
+[2024-11-22T07:43:52.048+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-11-22T07:43:52.210+0000] {soda_telemetry.py:61} INFO - Setting up usage telemetry.
+[2024-11-22T07:43:52.247+0000] {logging_mixin.py:188} INFO - Running Soda Scan ...
+[2024-11-22T07:43:52.249+0000] {log.py:101} INFO - [07:43:52] Soda Core 3.4.1
+[2024-11-22T07:43:55.144+0000] {log.py:101} INFO - [07:43:55] Using application default credentials.
+[2024-11-22T07:43:56.889+0000] {log.py:101} ERROR - [07:43:56] Metrics 'schema' were not computed for check 'schema'
+[2024-11-22T07:43:56.889+0000] {log.py:101} INFO - [07:43:56] Scan summary:
+[2024-11-22T07:43:56.890+0000] {log.py:101} INFO - [07:43:56] 1/1 check NOT EVALUATED: 
+[2024-11-22T07:43:56.890+0000] {log.py:101} INFO - [07:43:56]     green_tripdata in nyc_green_taxi
+[2024-11-22T07:43:56.891+0000] {log.py:101} INFO - [07:43:56]       Schema Check [include/soda/checks/sources/green_tripdata.yml] [NOT EVALUATED]
+[2024-11-22T07:43:56.891+0000] {log.py:101} INFO - [07:43:56]         schema_measured = []
+[2024-11-22T07:43:56.891+0000] {log.py:101} INFO - [07:43:56] 1 checks not evaluated.
+[2024-11-22T07:43:56.892+0000] {log.py:101} INFO - [07:43:56] 1 errors.
+[2024-11-22T07:43:56.892+0000] {log.py:101} INFO - [07:43:56] Oops! 1 error. 0 failures. 0 warnings. 0 pass.
+[2024-11-22T07:43:56.892+0000] {log.py:94} INFO - ERRORS:
+[2024-11-22T07:43:56.893+0000] {log.py:101} ERROR - [07:43:56] Metrics 'schema' were not computed for check 'schema'
+[2024-11-22T07:43:56.893+0000] {log.py:101} INFO - [07:43:56] Sending results to Soda Cloud
+[2024-11-22T07:43:58.141+0000] {log.py:101} INFO - [07:43:58] Soda Cloud Trace: 5497763233023862390
+[2024-11-22T07:43:58.142+0000] {logging_mixin.py:188} INFO - INFO   | Soda Core 3.4.1
+DEBUG  | Reading configuration file "include/soda/configuration.yml"
+DEBUG  | Reading SodaCL file "include/soda/checks/sources/green_tripdata.yml"
+DEBUG  | Scan execution starts
+INFO   | Using application default credentials.
+DEBUG  | Query 1.nyc_green_taxi.green_tripdata.schema[green_tripdata]:
+SELECT column_name, data_type, is_nullable FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = 'green_tripdata';
+ERROR  | Metrics 'schema' were not computed for check 'schema'
+INFO   | Scan summary:
+DEBUG  | 1/1 query OK
+DEBUG  |   1.nyc_green_taxi.green_tripdata.schema[green_tripdata] [OK] 0:00:01.676390
+INFO   | 1/1 check NOT EVALUATED: 
+INFO   |     green_tripdata in nyc_green_taxi
+INFO   |       Schema Check [include/soda/checks/sources/green_tripdata.yml] [NOT EVALUATED]
+INFO   |         schema_measured = []
+INFO   | 1 checks not evaluated.
+INFO   | 1 errors.
+INFO   | Oops! 1 error. 0 failures. 0 warnings. 0 pass.
+INFO   | Sending results to Soda Cloud
+INFO   | Soda Cloud Trace: 5497763233023862390
+[2024-11-22T07:43:58.142+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-11-22T07:43:58.143+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/data_ingestion.py", line 136, in check_load
+    result = check(scan_name, checks_subpath)
+  File "/opt/airflow/include/soda/check_function.py", line 23, in check
+    raise ValueError('Soda Scan failed')
+ValueError: Soda Scan failed
+[2024-11-22T07:43:58.155+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=nyc_green_taxi, task_id=check_load_tripdata, run_id=manual__2024-11-22T07:38:32.735128+00:00, execution_date=20241122T073832, start_date=20241122T074351, end_date=20241122T074358
+[2024-11-22T07:43:58.166+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 90 for task check_load_tripdata (Soda Scan failed; 2031)
+[2024-11-22T07:43:58.219+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2024-11-22T07:43:58.244+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-22T07:43:58.248+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,28 @@
+[2024-12-17T02:37:09.702+0000] {processor.py:161} INFO - Started process (PID=21170) to work on /opt/airflow/dags/green_taxi_dags.py
+[2024-12-17T02:37:09.739+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/green_taxi_dags.py for tasks to queue
+[2024-12-17T02:37:09.759+0000] {logging_mixin.py:188} INFO - [2024-12-17T02:37:09.758+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/green_taxi_dags.py
+[2024-12-17T02:37:10.091+0000] {processor.py:840} INFO - DAG(s) 'green_taxi' retrieved from /opt/airflow/dags/green_taxi_dags.py
+[2024-12-17T02:37:10.331+0000] {logging_mixin.py:188} INFO - [2024-12-17T02:37:10.331+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-12-17T02:37:10.520+0000] {logging_mixin.py:188} INFO - [2024-12-17T02:37:10.510+0000] {dag.py:3947} INFO - Setting next_dagrun for green_taxi to 2024-11-01 00:00:00+00:00, run_after=2024-11-01 00:00:00+00:00
+[2024-12-17T02:37:10.633+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/green_taxi_dags.py took 0.984 seconds
+[2024-12-17T04:59:53.383+0000] {processor.py:161} INFO - Started process (PID=21171) to work on /opt/airflow/dags/green_taxi_dags.py
+[2024-12-17T04:59:53.400+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/green_taxi_dags.py for tasks to queue
+[2024-12-17T04:59:53.413+0000] {logging_mixin.py:188} INFO - [2024-12-17T04:59:53.411+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/green_taxi_dags.py
+[2024-12-17T04:59:53.482+0000] {processor.py:840} INFO - DAG(s) 'green_taxi' retrieved from /opt/airflow/dags/green_taxi_dags.py
+[2024-12-17T04:59:53.613+0000] {logging_mixin.py:188} INFO - [2024-12-17T04:59:53.612+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-12-17T04:59:53.720+0000] {logging_mixin.py:188} INFO - [2024-12-17T04:59:53.719+0000] {dag.py:3947} INFO - Setting next_dagrun for green_taxi to 2024-11-01 00:00:00+00:00, run_after=2024-11-01 00:00:00+00:00
+[2024-12-17T04:59:53.811+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/green_taxi_dags.py took 0.461 seconds
+[2024-12-17T05:00:26.017+0000] {processor.py:161} INFO - Started process (PID=21180) to work on /opt/airflow/dags/green_taxi_dags.py
+[2024-12-17T05:00:22.301+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/green_taxi_dags.py for tasks to queue
+[2024-12-17T05:00:22.304+0000] {logging_mixin.py:188} INFO - [2024-12-17T05:00:22.303+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/green_taxi_dags.py
+[2024-12-17T05:00:22.344+0000] {processor.py:840} INFO - DAG(s) 'green_taxi' retrieved from /opt/airflow/dags/green_taxi_dags.py
+[2024-12-17T05:00:22.407+0000] {logging_mixin.py:188} INFO - [2024-12-17T05:00:22.406+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-12-17T05:00:22.468+0000] {logging_mixin.py:188} INFO - [2024-12-17T05:00:22.467+0000] {dag.py:3947} INFO - Setting next_dagrun for green_taxi to 2024-11-01 00:00:00+00:00, run_after=2024-11-01 00:00:00+00:00
+[2024-12-17T05:00:22.522+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/green_taxi_dags.py took 0.261 seconds
+[2024-12-17T05:00:53.382+0000] {processor.py:161} INFO - Started process (PID=21187) to work on /opt/airflow/dags/green_taxi_dags.py
+[2024-12-17T05:00:53.384+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/green_taxi_dags.py for tasks to queue
+[2024-12-17T05:00:53.385+0000] {logging_mixin.py:188} INFO - [2024-12-17T05:00:53.385+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/green_taxi_dags.py
+[2024-12-17T05:00:53.407+0000] {processor.py:840} INFO - DAG(s) 'green_taxi' retrieved from /opt/airflow/dags/green_taxi_dags.py
+[2024-12-17T05:00:53.455+0000] {logging_mixin.py:188} INFO - [2024-12-17T05:00:53.454+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-12-17T05:00:53.508+0000] {logging_mixin.py:188} INFO - [2024-12-17T05:00:53.507+0000] {dag.py:3947} INFO - Setting next_dagrun for green_taxi to 2024-11-01 00:00:00+00:00, run_after=2024-11-01 00:00:00+00:00
+[2024-12-17T05:00:53.555+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/green_taxi_dags.py took 0.184 seconds

@@ -1,0 +1,14 @@
+# profiles.yml
+
+nyc_taxi:
+ target: dev
+ outputs:
+  dev:
+    type: bigquery
+    method: service-account
+    keyfile: /opt/airflow/keys/service_account.json
+    project: northern-shield-437204-m0
+    dataset: nyc_taxi
+    threads: 1
+    timeout_seconds: 300
+    location: us-central1
