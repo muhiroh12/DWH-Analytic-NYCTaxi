@@ -11,5 +11,5 @@ data_source nyc_green_taxi:
     dataset: nyc_taxi
 soda_cloud:
   host: cloud.soda.io
-  api_key_id: 647c62ad-a356-490c-ac11-485bd8515d72
-  api_key_secret: EleeJhZDaIpP5NvH6r0x4mUMpR7oruvO9KUNGsrmAQdqk8VSsIFSgA
+  api_key_id: copy from soda cloud
+  api_key_secret: copy from soda cloud
