@@ -93,4 +93,4 @@ Power BI
 ![Distribution](doc/distribution.png)
 
 - Revenue
-![Revenue](doc/revenue.png)
+![Revenue2](doc/revenue.png)
