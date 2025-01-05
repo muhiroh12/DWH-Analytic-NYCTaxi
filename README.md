@@ -13,7 +13,7 @@ Tools :
 
 Workflow
 
-![workflow](Doc/nyc_taxi.png)
+![workflow](doc/nyc_taxi.png)
 
 - Create a service account in your GCP project, download the key file, and save it in the project directory (e.g., include/.gcp)
 - Copy the API key ID and API key secret for Soda Cloud, and paste them into include/soda/configuration.yml
@@ -23,7 +23,7 @@ Workflow
     ```
     Note: Ensure that the values for GCP_PROJECT_ID and GCP_GCS_BUCKET are correctly filled with the appropriate Project ID and bucket name. Similarly, for the volume, ensure that the directory path is correct.
 
-    ![Docker](Doc/docker.png)
+    ![Docker](doc/docker.png)
 
 - download file for green tripdata and zone lookup
 - ingest data to raw folder on GCS
@@ -34,7 +34,7 @@ Workflow
 - create dbt/models/sources/sources.yml: this file is used to define source tables from your data warehouse or database. 
 - create dbt/models/transform: this file is used to define your models
 
-![Pipeline](Doc/job-airflow.png)
+![Pipeline](doc/job-airflow.png)
 
 
 DBT
@@ -59,7 +59,7 @@ Running manually:
     ```
     dbt run --profiles-dir /opt/airflow/include/dbt/
     ```
-    ![DBT Run](Doc/dbt-run.png)
+    ![DBT Run](doc/dbt-run.png)
 
 6. Test dbt models
     ```
@@ -67,30 +67,30 @@ Running manually:
     ```
     Note: Ensure the schema.yml has been created
 
-    ![DBT Test](Doc/dbt-test.png)
+    ![DBT Test](doc/dbt-test.png)
 
 7. Generate docs
     ```
     dbt docs generate
     ```
-    ![DBT Docs Generate](Doc/dbt-docs-generate.png)
+    ![DBT Docs Generate](doc/dbt-docs-generate.png)
 
 8. DBT docs serve: This command starts a webserver on port 8080 to serve your documentation locally and opens the documentation site in your default browser.
     ```
     dbt docs serve --port 8001 --host 0.0.0.0
     ```
-    ![DBT Docs serve](Doc/dbt-docs-serve-browser3.png)
+    ![DBT Docs serve](doc/dbt-docs-serve-browser3.png)
 
 Google BigQuery
-![Schema data](Doc/schema-bigquery.png)
+![Schema data](doc/schema-bigquery.png)
 
 Power BI
 
 - Overview
-![Overview](Doc/overview.png)
+![Overview](doc/overview.png)
 
 - Distribution
-![Distribution](Doc/distribution.png)
+![Distribution](doc/distribution.png)
 
 - Revenue
-![Revenue](Doc/revenue.png)
+![Revenue](doc/revenue.png)
